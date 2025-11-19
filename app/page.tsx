@@ -10,7 +10,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
           <div className="flex items-center gap-3">
             <Image 
-              src="/iCodeLogo.png" 
+              src="/iCodeLogoCroped.png" 
               alt="iCode Marketing logo" 
               width={48} 
               height={48} 
@@ -154,18 +154,7 @@ export default function Home() {
               </div>
               
               {/* Contact Form Placeholder */}
-              <div className="rounded-xl border border-black/10 p-6 dark:border-white/15">
-                <p className="text-lg font-semibold">Pošaljite nam poruku</p>
-                <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
-                  Kontaktirajte nas direktno putem telefona, emaila ili društvenih mreža za brži odgovor.
-                </p>
-                <div className="mt-6 space-y-4">
-                  <div className="h-10 rounded-md bg-zinc-100 dark:bg-zinc-800"></div>
-                  <div className="h-10 rounded-md bg-zinc-100 dark:bg-zinc-800"></div>
-                  <div className="h-24 rounded-md bg-zinc-100 dark:bg-zinc-800"></div>
-                  <div className="h-10 rounded-md bg-blue-600"></div>
-                </div>
-              </div>
+              <ContactForm />
             </div>
           </div>
         </section>
