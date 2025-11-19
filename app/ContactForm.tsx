@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import toast from 'react-hot-toast';
 
 export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
@@ -26,13 +27,15 @@ export default function ContactForm() {
       });
 
       if (response.ok) {
-        alert('Poruka je uspješno poslana! Kontaktirat ćemo vas uskoro.');
+        toast.success('Poruka je uspješno poslana! Kontaktirat ćemo vas uskoro.');
         (e.target as HTMLFormElement).reset();
       } else {
-        alert('Došlo je do greške. Pokušajte ponovo.');
+        const errorData = await response.json().catch(() => ({} as any));
+        const message = (errorData && (errorData.message || errorData.error)) || 'Došlo je do greške. Pokušajte ponovo.';
+        toast.error(message);
       }
     } catch (error) {
-      alert('Došlo je do greške. Pokušajte ponovo.');
+      toast.error('Došlo je do greške. Pokušajte ponovo.');
     } finally {
       setIsLoading(false);
     }
