@@ -3,6 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --brand: #00129a; /* rgb(0, 18, 154) */
+  --brand-50: #f5f7ff;
+  --brand-100: #e6ebff;
 }
 
 @theme inline {
@@ -16,6 +19,8 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --brand-50: color-mix(in oklab, var(--brand) 10%, #000);
+    --brand-100: color-mix(in oklab, var(--brand) 20%, #000);
   }
 }
 
