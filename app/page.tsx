@@ -34,7 +34,10 @@ export default function Home() {
             {/* Large Logo/Image */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="absolute -inset-4 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-600 opacity-20 blur-lg"></div>
+                <div className="absolute -inset-4 rounded-2xl overflow-hidden pointer-events-none">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-600 to-purple-600 opacity-30 blur-xl"></div>
+                  <div className="absolute inset-0 mix-blend-overlay bg-[repeating-linear-gradient(45deg,rgba(255,255,255,0.03)_0,rgba(255,255,255,0.03)_2px,transparent_2px,transparent_4px)]"></div>
+                </div>
                 <Image 
                   src="/iCodeLogo.png" 
                   alt="iCode Marketing" 
@@ -84,7 +87,7 @@ export default function Home() {
               Od startupa do etabliranih brendova — B2B i B2C.
             </p>
             <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {['SaaS', 'e‑commerce', 'Lokalne usluge', 'Zdravstvo', 'Obrazovanje', 'Finansije'].map((industry, index) => (
+              {['SaaS', 'e‑commerce', 'Tech Startups', 'Social Media Analytics', 'Social Media Advertising', 'UX/UI Dizajn'].map((industry, index) => (
                 <div key={index} className="rounded-xl border border-black/5 bg-blue-50 p-6 text-center text-lg font-medium dark:border-white/15 dark:bg-blue-950/20">
                   {industry}
                 </div>
