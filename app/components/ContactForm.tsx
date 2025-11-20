@@ -11,9 +11,20 @@ export default function ContactForm() {
     setIsLoading(true);
     
     const formData = new FormData(e.target as HTMLFormElement);
+    
+    // Honeypot check - if this field is filled, it's likely a bot
+    if (formData.get('website')) {
+      // Pretend to succeed to not alert the bot
+      toast.success('Poruka je uspješno poslana!');
+      (e.target as HTMLFormElement).reset();
+      setIsLoading(false);
+      return;
+    }
+
     const data = {
       name: formData.get('name'),
       email: formData.get('email'),
+      phone: formData.get('phone'),
       message: formData.get('message')
     };
 
@@ -43,41 +54,56 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="rounded-lg border border-black/10 p-5 dark:border-white/15">
-      <div className="grid gap-3">
+      <div className="space-y-4">
+        {/* Honeypot field - hidden from humans but visible to bots */}
+        <div className="absolute left-[-9999px] opacity-0">
+          <label htmlFor="website">Ne popunjavajte ovo polje</label>
+          <input 
+            type="text" 
+            id="website" 
+            name="website" 
+            tabIndex={-1}
+            autoComplete="off"
+            className="hidden"
+          />
+        </div>
+        
         <input 
-          name="name"
-          className="rounded-md border border-black/10 bg-white px-3 py-2 text-sm outline-none placeholder:text-zinc-400 focus:border-blue-500 dark:border-white/20 dark:bg-black" 
-          placeholder="Vaše ime" 
-          required
-        />
-        <input 
-          name="email"
-          className="rounded-md border border-black/10 bg-white px-3 py-2 text-sm outline-none placeholder:text-zinc-400 focus:border-blue-500 dark:border-white/20 dark:bg-black" 
-          placeholder="Email" 
-          type="email" 
-          required
-        />
-        <input 
-          name="phone"
-          className="rounded-md border border-black/10 bg-white px-3 py-2 text-sm outline-none placeholder:text-zinc-400 focus:border-blue-500 dark:border-white/20 dark:bg-black" 
-          placeholder="Vaš broj telefona" 
-          type="tel" 
-          required
-        />
-        <textarea 
-          name="message"
-          className="min-h-28 rounded-md border border-black/10 bg-white px-3 py-2 text-sm outline-none placeholder:text-zinc-400 focus:border-blue-500 dark:border-white/20 dark:bg-black" 
-          placeholder="Detalji projekta" 
-          required
-        />
-        <button 
-          type="submit" 
-          disabled={isLoading}
-          className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-50"
-        >
-          {isLoading ? 'Slanje...' : 'Pošalji'}
-        </button>
-      </div>
+    name="name"
+    className="w-full rounded-md border border-black/10 bg-white px-3 py-2 text-sm outline-none placeholder:text-zinc-400 focus:border-blue-500 dark:border-white/20 dark:bg-black" 
+    placeholder="Vaše ime" 
+    required
+  />
+  <input 
+    name="email"
+    type="email"
+    className="w-full rounded-md border border-black/10 bg-white px-3 py-2 text-sm outline-none placeholder:text-zinc-400 focus:border-blue-500 dark:border-white/20 dark:bg-black" 
+    placeholder="Vaša email adresa" 
+    required
+  />
+  <input 
+    name="phone"
+    className="w-full rounded-md border border-black/10 bg-white px-3 py-2 text-sm outline-none placeholder:text-zinc-400 focus:border-blue-500 dark:border-white/20 dark:bg-black" 
+    placeholder="Vaš broj telefona" 
+    type="tel" 
+    required
+  />
+  <textarea 
+    name="message"
+    className="min-h-28 w-full rounded-md border border-black/10 bg-white px-3 py-2 text-sm outline-none placeholder:text-zinc-400 focus:border-blue-500 dark:border-white/20 dark:bg-black" 
+    placeholder="Detalji projekta" 
+    required
+  />
+  <div className="pt-6">
+    <button 
+      type="submit" 
+      disabled={isLoading}
+      className="w-full rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-50"
+    >
+      {isLoading ? 'Slanje...' : 'Pošalji'}
+    </button>
+  </div>
+</div>
     </form>
   );
 }

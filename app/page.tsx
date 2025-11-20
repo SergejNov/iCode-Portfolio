@@ -22,10 +22,12 @@ export default function Home() {
               <p className="max-w-xl text-pretty text-lg leading-8 text-zinc-700 dark:text-zinc-300">
                 Strategija brenda, moderni sajtovi, SEO i performans marketing. Brze iteracije, jasna komunikacija i mjerljivi rezultati.
               </p>
-              <div className="flex flex-wrap items-center gap-4">
-                <a href="tel:+491639071541" className="rounded-full bg-blue-600 px-6 py-3 text-base font-medium text-white transition hover:bg-blue-700">Pozovi odmah</a>
+              <div className="flex flex-wrap items-center justify-center gap-4 w-full sm:w-auto sm:justify-start">
+                <a href="tel:+491639071541" className="flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-base font-medium text-white transition hover:bg-blue-700">
+                  <PhoneIcon className="h-5 w-5" />
+                  <span>Pozovi odmah</span>
+                </a>
                 <a href="#services" className="rounded-full border-2 border-blue-600 px-6 py-3 text-base font-medium text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950">Pogledaj usluge</a>
-                <a href="https://wa.me/491639071541" target="_blank" rel="noopener noreferrer" className="rounded-full border-2 border-emerald-500/30 bg-emerald-500/10 px-6 py-3 text-base font-medium text-emerald-700 hover:bg-emerald-500/20 dark:text-emerald-300">WhatsApp</a>
               </div>
             </div>
 
@@ -48,30 +50,30 @@ export default function Home() {
 
         {/* Services Section */}
         <section id="services" className="scroll-mt-20 py-16 sm:scroll-mt-24">
-          <div className="rounded-2xl border border-black/5 bg-blue-50 p-8 shadow-sm dark:border-white/10 dark:bg-blue-950/20 sm:p-12">
-            <h2 className="text-3xl font-semibold tracking-tight">Naše usluge</h2>
-            <p className="mt-3 max-w-2xl text-base text-zinc-700 dark:text-zinc-300">
-              Od strategije i dizajna do razvoja i rasta — isporuka od početka do kraja.
-            </p>
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {[
-                { title: "Brend i strategija", desc: "Pozicioniranje, poruke, vizuelni identitet, sadržaj." },
-                { title: "Web sajtovi i aplikacije", desc: "Next.js, React, headless CMS, e‑commerce, brzina i performanse." },
-                { title: "SEO i rast", desc: "Tehnički SEO, analitika, oglašavanje, optimizacija konverzija." },
-                { title: "Sadržaj i društvene mreže", desc: "Planovi sadržaja, kreativna produkcija i distribucija." },
-                { title: "Automatizacija", desc: "CRM, email tokovi, chatbotovi, kvalifikacija leadova." },
-                { title: "Podrška i održavanje", desc: "Brz helpdesk, SLA i stalna poboljšanja." }
-              ].map((service, index) => (
-                <div key={index} className="rounded-xl border border-black/10 p-6 transition hover:shadow-md dark:border-white/15 dark:hover:shadow-zinc-800/50">
-                  <h3 className="text-lg font-semibold">{service.title}</h3>
-                  <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">{service.desc}</p>
-                  <div className="mt-4">
-                    <a href="#contact" className="inline-block rounded-full bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">Zatraži ponudu</a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          <div className="rounded-2xl border border-black/5 bg-blue-50 p-8 text-center sm:text-left shadow-sm dark:border-white/10 dark:bg-blue-950/20 sm:p-12">
+  <h2 className="text-3xl font-semibold tracking-tight">Naše usluge</h2>
+  <p className="mt-3 text-center text-base text-zinc-700 dark:text-zinc-300 sm:text-left sm:max-w-2xl">
+  Od strategije i dizajna do razvoja i rasta — isporuka od početka do kraja.
+</p>
+  <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    {[
+      { title: "Brend i strategija", desc: "Pozicioniranje, poruke, vizuelni identitet, sadržaj." },
+      { title: "Web sajtovi i aplikacije", desc: "Next.js, React, headless CMS, e‑commerce, brzina i performanse." },
+      { title: "SEO i rast", desc: "Tehnički SEO, analitika, oglašavanje, optimizacija konverzija." },
+      { title: "Sadržaj i društvene mreže", desc: "Planovi sadržaja, kreativna produkcija i distribucija." },
+      { title: "Automatizacija", desc: "CRM, email tokovi, chatbotovi, kvalifikacija leadova." },
+      { title: "Podrška i održavanje", desc: "Brz helpdesk, SLA i stalna poboljšanja." }
+    ].map((service, index) => (
+      <div key={index} className="mx-auto w-full max-w-md rounded-xl border border-black/10 p-6 text-center transition hover:shadow-md dark:border-white/15 dark:hover:shadow-zinc-800/50 sm:mx-0 sm:max-w-none sm:text-left">
+        <h3 className="text-lg font-semibold">{service.title}</h3>
+        <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">{service.desc}</p>
+        <div className="mt-4 flex justify-center sm:justify-start">
+          <a href="#contact" className="inline-block rounded-full bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">Zatraži ponudu</a>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
         </section>
 
         {/* Coverage Section */}
@@ -107,7 +109,10 @@ export default function Home() {
                 <div className="space-y-6">
                   <div>
                     <div className="text-lg font-semibold">Telefon</div>
-                    <a href="tel:+491639071541" className="mt-2 inline-block rounded-full border-2 border-blue-600 px-4 py-2 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950">+49 163 907 1541</a>
+                    <a href="tel:+491639071541" className="mt-2 inline-flex items-center gap-2 rounded-full border-2 border-blue-600 px-4 py-2 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950">
+                      <PhoneIcon className="h-4 w-4" />
+                      <span>+49 163 907 1541</span>
+                    </a>
                   </div>
                   <div>
                     <div className="text-lg font-semibold">Email</div>
