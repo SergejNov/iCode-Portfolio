@@ -1,44 +1,14 @@
 
 
 import Image from "next/image";
-import ContactForm from "./ContactForm";
+import ContactForm from "./components/ContactForm";
+import Header from "./components/Header";
+import { PhoneIcon } from '@heroicons/react/24/solid';
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-black dark:bg-black dark:text-zinc-50">
-      {/* Header */}
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-black/5 bg-white/80 backdrop-blur dark:border-white/10 dark:bg-black/60">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-          <div className="flex items-center gap-3">
-            <Image 
-              src="/iCodeLogoCroped.png" 
-              alt="iCode Marketing logo" 
-              width={48} 
-              height={48} 
-              className="h-12 w-12" 
-            />
-            <span className="text-lg font-semibold tracking-tight">iCode Marketing</span>
-          </div>
-          
-          {/* Mobile Menu Button */}
-          <button 
-            type="button"
-            className="sm:hidden rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-800"
-            aria-label="Toggle menu"
-          >
-            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden items-center gap-4 text-sm font-medium sm:flex">
-            <a href="#services" className="rounded-full border border-blue-600 px-4 py-2 text-blue-600 transition hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950">Usluge</a>
-            <a href="#coverage" className="rounded-full border border-blue-600 px-4 py-2 text-blue-600 transition hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950">Industrije</a>
-            <a href="#contact" className="rounded-full border border-blue-600 px-4 py-2 text-blue-600 transition hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950">Kontakt</a>
-            <a href="tel:+491639071541" className="rounded-full bg-blue-600 px-4 py-2 text-white transition hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600">Pozovi</a>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       <main className="mx-auto max-w-7xl px-4 pt-20">
         {/* Hero Section with Side Image */}
@@ -54,8 +24,8 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a href="tel:+491639071541" className="rounded-full bg-blue-600 px-6 py-3 text-base font-medium text-white transition hover:bg-blue-700">Pozovi odmah</a>
-                <a href="#services" className="rounded-full border border-blue-600 px-6 py-3 text-base font-medium text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950">Pogledaj usluge</a>
-                <a href="https://wa.me/491639071541" target="_blank" rel="noopener noreferrer" className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-6 py-3 text-base font-medium text-emerald-700 hover:bg-emerald-500/20 dark:text-emerald-300">WhatsApp</a>
+                <a href="#services" className="rounded-full border-2 border-blue-600 px-6 py-3 text-base font-medium text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950">Pogledaj usluge</a>
+                <a href="https://wa.me/491639071541" target="_blank" rel="noopener noreferrer" className="rounded-full border-2 border-emerald-500/30 bg-emerald-500/10 px-6 py-3 text-base font-medium text-emerald-700 hover:bg-emerald-500/20 dark:text-emerald-300">WhatsApp</a>
               </div>
             </div>
 
@@ -129,32 +99,33 @@ export default function Home() {
               Pišite nam o svom projektu. Odgovaramo najčešće istog dana.
             </p>
             <div className="mt-12 grid gap-8 lg:grid-cols-2">
+              {/* Contact Form */}
+              <ContactForm />
+              
+              {/* Contact Information */}
               <div className="rounded-xl border border-black/10 p-6 dark:border-white/15">
                 <div className="space-y-6">
                   <div>
                     <div className="text-lg font-semibold">Telefon</div>
-                    <a href="tel:+491639071541" className="mt-2 inline-block rounded-full border border-blue-600 px-4 py-2 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950">+49 163 907 1541</a>
+                    <a href="tel:+491639071541" className="mt-2 inline-block rounded-full border-2 border-blue-600 px-4 py-2 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950">+49 163 907 1541</a>
                   </div>
                   <div>
                     <div className="text-lg font-semibold">Email</div>
-                    <a href="mailto:info@icode-marketing.com" className="mt-2 inline-block rounded-full border border-blue-600 px-4 py-2 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950">info@icode-marketing.com</a>
+                    <a href="mailto:info@icode-marketing.com" className="mt-2 inline-block rounded-full border-2 border-blue-600 px-4 py-2 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950">info@icode-marketing.com</a>
                   </div>
                   <div>
                     <div className="text-lg font-semibold">WhatsApp</div>
-                    <a href="https://wa.me/491639071541" target="_blank" rel="noopener noreferrer" className="mt-2 inline-block rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-emerald-700 hover:bg-emerald-500/20 dark:text-emerald-300">Napišite poruku na WhatsApp</a>
+                    <a href="https://wa.me/491639071541" target="_blank" rel="noopener noreferrer" className="mt-2 inline-block rounded-full border-2 border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-emerald-700 hover:bg-emerald-500/20 dark:text-emerald-300">WhatsApp poruka</a>
                   </div>
                   <div>
                     <div className="text-lg font-semibold">Društvene mreže</div>
                     <div className="mt-2 flex flex-wrap gap-3">
-                      <a className="inline-block rounded-full border border-blue-600 px-4 py-2 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950" href="https://www.instagram.com/icode.marketing" target="_blank" rel="noopener noreferrer">Instagram</a>
-                      <a className="inline-block rounded-full border border-blue-600 px-4 py-2 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950" href="https://www.facebook.com/share/1A65FdQSPv/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                      <a className="inline-block rounded-full border-2 border-blue-600 px-4 py-2 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950" href="https://www.instagram.com/icode.marketing" target="_blank" rel="noopener noreferrer">Instagram</a>
+                      <a className="inline-block rounded-full border-2 border-blue-600 px-4 py-2 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950" href="https://www.facebook.com/share/1A65FdQSPv/" target="_blank" rel="noopener noreferrer">Facebook</a>
                     </div>
                   </div>
                 </div>
               </div>
-              
-              {/* Contact Form Placeholder */}
-              <ContactForm />
             </div>
           </div>
         </section>

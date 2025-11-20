@@ -57,6 +57,13 @@ export default function ContactForm() {
           type="email" 
           required
         />
+        <input 
+          name="phone"
+          className="rounded-md border border-black/10 bg-white px-3 py-2 text-sm outline-none placeholder:text-zinc-400 focus:border-blue-500 dark:border-white/20 dark:bg-black" 
+          placeholder="Vaš broj telefona" 
+          type="tel" 
+          required
+        />
         <textarea 
           name="message"
           className="min-h-28 rounded-md border border-black/10 bg-white px-3 py-2 text-sm outline-none placeholder:text-zinc-400 focus:border-blue-500 dark:border-white/20 dark:bg-black" 
