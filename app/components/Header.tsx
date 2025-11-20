@@ -12,7 +12,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-40 border-b border-black/10 bg-white/80 backdrop-blur-md dark:border-white/10 dark:bg-gray-900/80">
+    <header className="fixed left-0 right-0 top-0 z-40 border-b border-white/10 backdrop-blur-md bg-gray-900/80">
       <div className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
         <div className="flex items-center gap-3">
           <Image 
@@ -28,7 +28,7 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button 
           type="button"
-          className="sm:hidden rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-800"
+          className="sm:hidden rounded-lg p-2 hover:bg-gray-800"
           aria-label="Toggle menu"
           onClick={toggleMenu}
         >
@@ -44,32 +44,32 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="sm:hidden absolute left-0 right-0 top-16 z-50 bg-white shadow-lg dark:bg-gray-900">
+          <div className="sm:hidden absolute left-0 right-0 top-16 z-50 bg-gray-900 shadow-lg">
             <div className="flex flex-col space-y-2 p-4">
               <a 
                 href="#services" 
-                className="block rounded-lg px-4 py-2 text-center font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="block rounded-lg px-4 py-2 text-center font-medium hover:bg-gray-800"
                 onClick={toggleMenu}
               >
                 Usluge
               </a>
               <a 
                 href="#coverage" 
-                className="block rounded-lg px-4 py-2 text-center font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="block rounded-lg px-4 py-2 text-center font-medium hover:bg-gray-800"
                 onClick={toggleMenu}
               >
                 Industrije
               </a>
               <a 
                 href="#contact" 
-                className="block rounded-lg px-4 py-2 text-center font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="block rounded-lg px-4 py-2 text-center font-medium hover:bg-gray-800"
                 onClick={toggleMenu}
               >
                 Kontakt
               </a>
               <a 
                 href="tel:+491639071541" 
-                className="flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-center font-medium text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
+                className="flex items-center justify-center gap-2 rounded-lg bg-blue-500 px-4 py-2 text-center font-medium text-white hover:bg-blue-600"
                 onClick={toggleMenu}
               >
                 <PhoneIcon className="h-5 w-5" />
@@ -81,10 +81,10 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-4 text-sm font-medium sm:flex">
-          <a href="#services" className="rounded-full border-2 border-blue-600 px-4 py-2 text-blue-600 transition hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950">Usluge</a>
-          <a href="#coverage" className="rounded-full border-2 border-blue-600 px-4 py-2 text-blue-600 transition hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950">Industrije</a>
-          <a href="#contact" className="rounded-full border-2 border-blue-600 px-4 py-2 text-blue-600 transition hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950">Kontakt</a>
-          <a href="tel:+491639071541" className="flex items-center gap-2 rounded-full bg-blue-600 px-4 py-2 text-white transition hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600">
+          <a href="#services" className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950">Usluge</a>
+          <a href="#coverage" className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950">Industrije</a>
+          <a href="#contact" className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950">Kontakt</a>
+          <a href="tel:+491639071541" className="flex items-center gap-2 rounded-full bg-blue-500 px-4 py-2 text-white transition hover:bg-blue-600">
             <PhoneIcon className="h-5 w-5" />
             <span>+49 163 9071541</span>
           </a>

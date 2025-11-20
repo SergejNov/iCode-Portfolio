@@ -7,7 +7,7 @@ import { PhoneIcon } from '@heroicons/react/24/solid';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white text-black dark:bg-black dark:text-zinc-50">
+    <div className="min-h-screen bg-black text-zinc-50">
       <Header />
 
       <main className="mx-auto max-w-7xl px-4 pt-20">
@@ -19,7 +19,7 @@ export default function Home() {
               <h1 className="max-w-2xl text-balance text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
                 Marketinška agencija i izrada web sajtova koja donosi rast
               </h1>
-              <p className="max-w-xl text-pretty text-lg leading-8 text-zinc-700 dark:text-zinc-300">
+              <p className="max-w-xl text-pretty text-lg leading-8">
                 Strategija brenda, moderni sajtovi, SEO i performans marketing. Brze iteracije, jasna komunikacija i mjerljivi rezultati.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4 w-full sm:w-auto sm:justify-start">
@@ -27,7 +27,7 @@ export default function Home() {
                   <PhoneIcon className="h-5 w-5" />
                   <span>Pozovi odmah</span>
                 </a>
-                <a href="#services" className="rounded-full border-2 border-blue-600 px-6 py-3 text-base font-medium text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950">Pogledaj usluge</a>
+                <a href="#services" className="rounded-full border-2 border-blue-400 px-6 py-3 text-base font-medium text-blue-400 hover:bg-blue-950">Pogledaj usluge</a>
               </div>
             </div>
 
@@ -53,9 +53,9 @@ export default function Home() {
 
         {/* Services Section */}
         <section id="services" className="scroll-mt-20 py-16 sm:scroll-mt-24">
-          <div className="rounded-2xl border border-black/5 bg-blue-50 p-8 text-center sm:text-left shadow-sm dark:border-white/10 dark:bg-blue-950/20 sm:p-12">
+          <div className="rounded-2xl border border-white/10 bg-blue-950/20 p-8 text-center sm:text-left shadow-sm sm:p-12">
   <h2 className="text-3xl font-semibold tracking-tight">Naše usluge</h2>
-  <p className="mt-3 text-center text-base text-zinc-700 dark:text-zinc-300 sm:text-left sm:max-w-2xl">
+  <p className="mt-3 text-center text-base sm:text-left sm:max-w-2xl">
   Od strategije i dizajna do razvoja i rasta — isporuka od početka do kraja.
 </p>
   <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -67,9 +67,9 @@ export default function Home() {
       { title: "Automatizacija", desc: "CRM, email tokovi, chatbotovi, kvalifikacija leadova." },
       { title: "Podrška i održavanje", desc: "Brz helpdesk, SLA i stalna poboljšanja." }
     ].map((service, index) => (
-      <div key={index} className="mx-auto w-full max-w-md rounded-xl border border-black/10 p-6 text-center transition hover:shadow-md dark:border-white/15 dark:hover:shadow-zinc-800/50 sm:mx-0 sm:max-w-none sm:text-left">
+      <div key={index} className="mx-auto w-full max-w-md rounded-xl border border-white/15 p-6 text-center transition hover:shadow-md hover:shadow-zinc-800/50 sm:mx-0 sm:max-w-none sm:text-left">
         <h3 className="text-lg font-semibold">{service.title}</h3>
-        <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">{service.desc}</p>
+        <p className="mt-2 text-sm ">{service.desc}</p>
         <div className="mt-4 flex justify-center sm:justify-start">
           <a href="#contact" className="inline-block rounded-full bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">Zatraži ponudu</a>
         </div>
@@ -81,14 +81,14 @@ export default function Home() {
 
         {/* Coverage Section */}
         <section id="coverage" className="scroll-mt-20 py-16 sm:scroll-mt-24">
-          <div className="rounded-2xl border border-black/5 bg-blue-50 p-8 shadow-sm dark:border-white/10 dark:bg-blue-950/20 sm:p-12">
+          <div className="rounded-2xl border border-white/10 bg-blue-950/20 p-8 shadow-sm sm:p-12">
             <h2 className="text-3xl font-semibold tracking-tight">Industrije s kojima radimo</h2>
-            <p className="mt-3 max-w-2xl text-base text-zinc-700 dark:text-zinc-300">
+            <p className="mt-3 max-w-2xl text-base text-zinc-300">
               Od startupa do etabliranih brendova — B2B i B2C.
             </p>
             <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {['SaaS', 'e‑commerce', 'Tech Startups', 'Social Media Analytics', 'Social Media Advertising', 'UX/UI Dizajn'].map((industry, index) => (
-                <div key={index} className="rounded-xl border border-black/5 bg-blue-50 p-6 text-center text-lg font-medium dark:border-white/15 dark:bg-blue-950/20">
+                <div key={index} className="rounded-xl border border-white/15 bg-blue-950/20 p-6 text-center text-lg font-medium">
                   {industry}
                 </div>
               ))}
@@ -98,9 +98,9 @@ export default function Home() {
 
         {/* Contact Section */}
         <section id="contact" className="scroll-mt-20 py-16 sm:scroll-mt-24">
-          <div className="rounded-2xl border border-black/5 bg-blue-50 p-8 shadow-sm dark:border-white/10 dark:bg-blue-950/20 sm:p-12">
+          <div className="rounded-2xl border border-white/10 bg-blue-950/20 p-8 shadow-sm sm:p-12">
             <h2 className="text-3xl font-semibold tracking-tight">Kontakt</h2>
-            <p className="mt-3 max-w-2xl text-base text-zinc-700 dark:text-zinc-300">
+            <p className="mt-3 max-w-2xl text-base text-zinc-300">
               Pišite nam o svom projektu. Odgovaramo najčešće istog dana.
             </p>
             <div className="mt-12 grid gap-8 lg:grid-cols-2">
@@ -108,28 +108,28 @@ export default function Home() {
               <ContactForm />
               
               {/* Contact Information */}
-              <div className="rounded-xl border border-black/10 p-6 dark:border-white/15">
+              <div className="rounded-xl border border-white/15 p-6">
                 <div className="space-y-6">
                   <div>
                     <div className="text-lg font-semibold">Telefon</div>
-                    <a href="tel:+491639071541" className="mt-2 inline-flex items-center gap-2 rounded-full border-2 border-blue-600 px-4 py-2 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950">
+                    <a href="tel:+491639071541" className="mt-2 inline-flex items-center gap-2 rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 hover:bg-blue-950">
                       <PhoneIcon className="h-4 w-4" />
                       <span>+49 163 907 1541</span>
                     </a>
                   </div>
                   <div>
                     <div className="text-lg font-semibold">Email</div>
-                    <a href="mailto:info@icode-marketing.com" className="mt-2 inline-block rounded-full border-2 border-blue-600 px-4 py-2 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950">info@icode-marketing.com</a>
+                    <a href="mailto:info@icode-marketing.com" className="mt-2 inline-block rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 hover:bg-blue-950">info@icode-marketing.com</a>
                   </div>
                   <div>
                     <div className="text-lg font-semibold">WhatsApp</div>
-                    <a href="https://wa.me/491639071541" target="_blank" rel="noopener noreferrer" className="mt-2 inline-block rounded-full border-2 border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-emerald-700 hover:bg-emerald-500/20 dark:text-emerald-300">WhatsApp poruka</a>
+                    <a href="https://wa.me/491639071541" target="_blank" rel="noopener noreferrer" className="mt-2 inline-block rounded-full border-2 border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-emerald-300 hover:bg-emerald-500/20">WhatsApp poruka</a>
                   </div>
                   <div>
                     <div className="text-lg font-semibold">Društvene mreže</div>
                     <div className="mt-2 flex flex-wrap gap-3">
-                      <a className="inline-block rounded-full border-2 border-blue-600 px-4 py-2 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950" href="https://www.instagram.com/icode.marketing" target="_blank" rel="noopener noreferrer">Instagram</a>
-                      <a className="inline-block rounded-full border-2 border-blue-600 px-4 py-2 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950" href="https://www.facebook.com/share/1A65FdQSPv/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                      <a className="inline-block rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 hover:bg-blue-950" href="https://www.instagram.com/icode.marketing" target="_blank" rel="noopener noreferrer">Instagram</a>
+                      <a className="inline-block rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 hover:bg-blue-950" href="https://www.facebook.com/share/1A65FdQSPv/" target="_blank" rel="noopener noreferrer">Facebook</a>
                     </div>
                   </div>
                 </div>
@@ -139,7 +139,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="border-t border-black/5 py-12 text-center text-sm text-zinc-500 dark:border-white/10">
+      <footer className="border-t border-white/10 py-12 text-center text-sm text-zinc-500">
         &copy; {new Date().getFullYear()} iCode Marketing. Sva prava zadržana.
       </footer>
     </div>
