@@ -56,7 +56,7 @@ export default function Home() {
         </section>
 
         {/* Services Section */}
-        <section id="services" className="scroll-mt-20 py-16 sm:scroll-mt-24">
+        <section id="services" className="scroll-mt-20 pt-16 pb-8 sm:scroll-mt-24 sm:pt-24 sm:pb-12">
           <div className="rounded-2xl border-2 border-white/10 bg-blue-950/20 p-8 text-center sm:text-left shadow-sm sm:p-12">
   <h2 className="text-3xl font-semibold tracking-tight">Naše usluge</h2>
   <p className="mt-3 text-center text-base sm:text-left sm:max-w-2xl">
@@ -113,7 +113,7 @@ export default function Home() {
         </section>
 
         {/* Coverage Section */}
-        <section id="coverage" className="scroll-mt-20 py-16 sm:scroll-mt-24">
+        <section id="coverage" className="scroll-mt-20 pt-8 pb-10 sm:scroll-mt-24 sm:pt-12 sm:pb-12">
           <div className="rounded-2xl border-2 border-white/10 bg-blue-950/20 p-8 shadow-sm sm:p-12">
             <h2 className="text-3xl font-semibold tracking-tight">Brendovi s kojima radimo</h2>
             <p className="mt-3 max-w-2xl text-base text-zinc-300">
@@ -148,7 +148,7 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="scroll-mt-20 py-16 sm:scroll-mt-24">
+        <section id="contact" className="scroll-mt-20 pt-8 pb-16 sm:scroll-mt-24 sm:pt-10 sm:pb-16">
           <div className="rounded-2xl border-2 border-white/10 bg-blue-950/20 p-8 shadow-sm sm:p-12">
             <h2 className="text-3xl font-semibold tracking-tight">Kontakt</h2>
             <p className="mt-3 max-w-2xl text-base text-zinc-300">
