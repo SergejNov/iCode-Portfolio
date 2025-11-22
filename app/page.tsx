@@ -1,9 +1,15 @@
 
-
-import Image from "next/image";
 import ContactForm from "./components/ContactForm";
 import Header from "./components/Header";
-import { PhoneIcon } from '@heroicons/react/24/solid';
+import { 
+  PhoneIcon,
+  PaintBrushIcon,
+  CodeBracketIcon,
+  ArrowTrendingUpIcon,
+  ShareIcon,
+  ChatBubbleLeftRightIcon,
+  MegaphoneIcon
+} from '@heroicons/react/24/solid';
 
 export default function Home() {
   return (
@@ -58,14 +64,43 @@ export default function Home() {
 </p>
   <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
     {[
-      { title: "Brend i strategija", desc: "Pozicioniranje, poruke, vizuelni identitet, sadržaj." },
-      { title: "Web sajtovi i aplikacije", desc: "Next.js, React, headless CMS, e‑commerce, brzina i performanse." },
-      { title: "SEO i rast", desc: "Tehnički SEO, analitika, oglašavanje, optimizacija konverzija." },
-      { title: "Sadržaj i društvene mreže", desc: "Planovi sadržaja, kreativna produkcija i distribucija." },
-      { title: "Automatizacija", desc: "CRM, email tokovi, chatbotovi, kvalifikacija leadova." },
-      { title: "Podrška i održavanje", desc: "Brz helpdesk, SLA i stalna poboljšanja." }
+      { 
+        title: "Grafički dizajn", 
+        desc: "Vizuelni identitet, logo dizajn, brendiranje, marketing materijali.",
+        icon: <PaintBrushIcon className="h-8 w-8 text-blue-400" />
+      },
+      { 
+        title: "Web development", 
+        desc: "Moderne web aplikacije, Next.js, React, e‑commerce, brzina i performanse.",
+        icon: <CodeBracketIcon className="h-8 w-8 text-blue-400" />
+      },
+      { 
+        title: "SEO i rast", 
+        desc: "Tehnički SEO, analitika, reklamiranje, optimizacija konverzija.",
+        icon: <ArrowTrendingUpIcon className="h-8 w-8 text-blue-400" />
+      },
+      { 
+        title: "Sadržaj i društvene mreže", 
+        desc: "Planovi sadržaja, kreativna produkcija i distribucija.",
+        icon: <ShareIcon className="h-8 w-8 text-blue-400" />
+      },
+      { 
+        title: "Social media marketing", 
+        desc: "Strategije za društvene mreže, reklamiranje, upravljanje sadržajem.",
+        icon: <ChatBubbleLeftRightIcon className="h-8 w-8 text-blue-400" />
+      },
+      { 
+        title: "Google reklamiranje", 
+        desc: "Google Ads, PPC kampanje, pretraživačko i prikazno reklamiranje.",
+        icon: <MegaphoneIcon className="h-8 w-8 text-blue-400" />
+      }
     ].map((service, index) => (
       <div key={index} className="mx-auto w-full max-w-md rounded-xl border border-white/15 p-6 text-center transition hover:shadow-md hover:shadow-zinc-800/50 sm:mx-0 sm:max-w-none sm:text-left">
+        <div className="mb-4 flex justify-center sm:justify-start">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-900/50">
+            {service.icon}
+          </div>
+        </div>
         <h3 className="text-lg font-semibold">{service.title}</h3>
         <p className="mt-2 text-sm ">{service.desc}</p>
         <div className="mt-4 flex justify-center sm:justify-start">
