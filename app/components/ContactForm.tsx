@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import toast from 'react-hot-toast';
-import { Kod } from './config';
+const Kod = process.env.NEXT_PUBLIC_WEB3_KEY;
 
 export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
