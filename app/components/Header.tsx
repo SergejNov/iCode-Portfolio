@@ -6,14 +6,25 @@ import { PhoneIcon } from '@heroicons/react/24/solid';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLangOpen, setIsLangOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleTranslate = () => {
+  const goToEnglish = () => {
     const url = `https://translate.google.com/translate?sl=auto&tl=en&u=${encodeURIComponent(window.location.href)}`;
     window.location.href = url;
+  };
+
+  const goToSerbian = () => {
+    const currentUrl = window.location.href;
+    if (currentUrl.includes('translate.google.com')) {
+      const originalUrl = new URL(currentUrl).searchParams.get('u');
+      if (originalUrl) {
+        window.location.href = originalUrl;
+      }
+    }
   };
 
   return (
@@ -53,12 +64,21 @@ export default function Header() {
             <div className="flex flex-col space-y-2 p-4">
               <button
                 onClick={() => {
-                  handleTranslate();
+                  goToEnglish();
                   toggleMenu();
                 }}
                 className="block rounded-lg px-4 py-2 text-center font-medium hover:bg-gray-800"
               >
-                EN • Translate
+                EN • Translate to English
+              </button>
+              <button
+                onClick={() => {
+                  goToSerbian();
+                  toggleMenu();
+                }}
+                className="block rounded-lg px-4 py-2 text-center font-medium hover:bg-gray-800"
+              >
+                SR • Povratak na srpski
               </button>
               <a 
                 href="#services" 
@@ -95,7 +115,38 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-4 text-sm font-medium sm:flex">
-          <button onClick={handleTranslate} className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950">EN</button>
+          <div className="relative">
+            <button
+              onClick={() => setIsLangOpen((v) => !v)}
+              className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950"
+              aria-haspopup="true"
+              aria-expanded={isLangOpen}
+            >
+              SR / EN
+            </button>
+            {isLangOpen && (
+              <div className="absolute right-0 mt-2 w-40 rounded-lg border-2 border-white/10 bg-gray-900/95 shadow-lg">
+                <button
+                  onClick={() => {
+                    goToSerbian();
+                    setIsLangOpen(false);
+                  }}
+                  className="block w-full px-4 py-2 text-left hover:bg-gray-800"
+                >
+                  SR • Srpski
+                </button>
+                <button
+                  onClick={() => {
+                    goToEnglish();
+                    setIsLangOpen(false);
+                  }}
+                  className="block w-full px-4 py-2 text-left hover:bg-gray-800"
+                >
+                  EN • English
+                </button>
+              </div>
+            )}
+          </div>
           <a href="#services" className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950">Usluge</a>
           <a href="#coverage" className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950">Reference</a>
           <a href="#contact" className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950">Kontakt</a>

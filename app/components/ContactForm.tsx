@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import toast from 'react-hot-toast';
+import { Kod } from './config';
 
 export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
@@ -21,24 +22,31 @@ export default function ContactForm() {
       return;
     }
 
-    const data = {
+    const payload = {
+      access_key: Kod,
       name: formData.get('name'),
       email: formData.get('email'),
       phone: formData.get('phone'),
-      message: formData.get('message')
-    };
+      message: formData.get('message'),
+      subject: 'Novi kontakt sa sajta',
+    } as Record<string, any>;
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(payload),
       });
 
       if (response.ok) {
-        toast.success('Poruka je uspješno poslana! Kontaktirat ćemo vas uskoro.');
+        const result = await response.json().catch(() => ({} as any));
+        if (result && result.success) {
+          toast.success('Poruka je uspješno poslana! Kontaktirat ćemo vas uskoro.');
+        } else {
+          throw new Error(result?.message || 'Slanje nije uspjelo.');
+        }
         (e.target as HTMLFormElement).reset();
       } else {
         const errorData = await response.json().catch(() => ({} as any));

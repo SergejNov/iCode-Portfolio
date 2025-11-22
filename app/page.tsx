@@ -181,7 +181,7 @@ export default function Home() {
                   <div>
                     <div className="text-lg font-semibold">WhatsApp</div>
                     <div className="mt-2 sm:inline-block">
-                      <a href="https://wa.me/491639071541" target="_blank" rel="noopener noreferrer" className="inline-block rounded-full border-2 border-emerald-500/30 bg-emerald-500/10 px-6 py-2 text-emerald-300 hover:bg-emerald-500/20">
+                      <a href="https://wa.me/491639071541" target="_blank" rel="noopener noreferrer" className="inline-block max-w-xs overflow-hidden text-ellipsis whitespace-nowrap rounded-full border-2 border-blue-400 px-4 py-2 text-center text-blue-400 hover:bg-blue-950 sm:px-6 sm:text-left">
                         WhatsApp poruka
                       </a>
                     </div>
