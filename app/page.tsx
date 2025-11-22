@@ -8,44 +8,42 @@ import { PhoneIcon } from '@heroicons/react/24/solid';
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-zinc-50">
-      <Header />
+      <div className="relative z-50">
+        <Header />
+      </div>
 
-      <main className="mx-auto max-w-7xl px-4 pt-20">
-        {/* Hero Section with Side Image */}
-        <section id="hero" className="py-8 sm:py-12">
-          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
-            {/* Text Content */}
-            <div className="flex flex-col items-start gap-6">
-              <h1 className="max-w-2xl text-balance text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+      <main className="relative z-10 mx-auto max-w-7xl px-4 pt-24">
+        {/* Hero Section */}
+        <section id="hero" className="relative pt-16 pb-16 sm:py-20 overflow-hidden rounded-3xl">
+          {/* Background gradient */}
+          <div className="absolute inset-0 -z-10">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-950/50 via-black to-purple-950/50"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.15)_0,transparent_70%)]"></div>
+          </div>
+          
+          {/* Content */}
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="flex flex-col items-center gap-8">
+              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 pb-1">
                 Marketinška agencija i izrada web sajtova koja donosi rast
               </h1>
-              <p className="max-w-xl text-pretty text-lg leading-8">
+              <p className="text-xl text-zinc-300 max-w-3xl">
                 Strategija brenda, moderni sajtovi, SEO i performans marketing. Brze iteracije, jasna komunikacija i mjerljivi rezultati.
               </p>
-              <div className="flex flex-wrap items-center justify-center gap-4 w-full sm:w-auto sm:justify-start">
-                <a href="tel:+491639071541" className="flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-base font-medium text-white transition hover:bg-blue-700">
+              <div className="flex flex-wrap items-center justify-center gap-4 mt-4">
+                <a 
+                  href="tel:+491639071541" 
+                  className="flex items-center gap-2 rounded-full bg-blue-600 px-8 py-4 text-base font-medium text-white transition-all hover:bg-blue-700 hover:scale-105 transform"
+                >
                   <PhoneIcon className="h-5 w-5" />
                   <span>Pozovi odmah</span>
                 </a>
-                <a href="#services" className="rounded-full border-2 border-blue-400 px-6 py-3 text-base font-medium text-blue-400 hover:bg-blue-950">Pogledaj usluge</a>
-              </div>
-            </div>
-
-            {/* Large Logo/Image */}
-            <div className="flex justify-center lg:justify-end">
-              <div className="relative">
-                <div className="absolute -inset-4 rounded-2xl overflow-hidden pointer-events-none">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-600 to-purple-600 opacity-30 blur-xl"></div>
-                  <div className="absolute inset-0 mix-blend-overlay bg-[repeating-linear-gradient(45deg,rgba(255,255,255,0.03)_0,rgba(255,255,255,0.03)_2px,transparent_2px,transparent_4px)]"></div>
-                </div>
-                <Image 
-                  src="/iCodeLogo.png" 
-                  alt="iCode Marketing" 
-                  width={400}
-                  height={400}
-                  className="relative rounded-2xl object-contain"
-                  priority
-                />
+                <a 
+                  href="#services" 
+                  className="rounded-full border-2 border-blue-400 px-8 py-4 text-base font-medium text-blue-400 hover:bg-blue-950/50 hover:border-blue-300 hover:text-blue-300 transition-all"
+                >
+                  Pogledaj usluge
+                </a>
               </div>
             </div>
           </div>
