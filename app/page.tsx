@@ -154,7 +154,7 @@ export default function Home() {
             <p className="mt-3 max-w-2xl text-base text-zinc-300">
               Pišite nam o svom projektu. Odgovaramo najčešće istog dana.
             </p>
-            <div className="mt-12 grid gap-8 lg:grid-cols-2 max-w-4xl mx-auto">
+            <div className="mt-12 grid gap-8 lg:grid-cols-2">
               {/* Contact Form */}
               <ContactForm />
               
