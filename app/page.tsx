@@ -154,12 +154,12 @@ export default function Home() {
             <p className="mt-3 max-w-2xl text-base text-zinc-300">
               Pišite nam o svom projektu. Odgovaramo najčešće istog dana.
             </p>
-            <div className="mt-12 grid gap-8 lg:grid-cols-2">
+            <div className="mt-12 grid gap-8 lg:grid-cols-2 justify-items-center lg:justify-items-stretch mx-auto max-w-3xl lg:mx-0 lg:max-w-none">
               {/* Contact Form */}
               <ContactForm />
               
               {/* Contact Information */}
-              <div className="rounded-xl border-2 border-white/15 p-6 text-center sm:text-left">
+              <div className="mx-auto w-full max-w-md lg:mx-0 lg:max-w-none rounded-xl border-2 border-white/15 p-6 text-center sm:text-left">
                 <div className="space-y-6">
                   <div>
                     <div className="text-lg font-semibold">Telefon</div>

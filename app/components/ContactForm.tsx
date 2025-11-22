@@ -53,7 +53,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mx-auto w-full max-w-md rounded-lg border-2 border-white/15 px-6 pb-8 pt-6">
+    <form onSubmit={handleSubmit} className="mx-auto w-full max-w-md lg:mx-0 lg:max-w-none rounded-lg border-2 border-white/15 px-6 pb-8 pt-6">
       <div className="space-y-4">
         {/* Honeypot field - hidden from humans but visible to bots */}
         <div className="absolute left-[-9999px] opacity-0">
