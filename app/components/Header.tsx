@@ -11,6 +11,11 @@ export default function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleTranslate = () => {
+    const url = `https://translate.google.com/translate?sl=auto&tl=en&u=${encodeURIComponent(window.location.href)}`;
+    window.location.href = url;
+  };
+
   return (
     <header className="fixed left-0 right-0 top-0 z-40 border-b border-white/10 backdrop-blur-md bg-gray-900/80">
       <div className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
@@ -22,7 +27,7 @@ export default function Header() {
             height={48} 
             className="h-12 w-12" 
           />
-          <span className="text-lg font-semibold tracking-tight">iCode Marketing</span>
+          
         </div>
 
         {/* Mobile Menu Button */}
@@ -46,6 +51,15 @@ export default function Header() {
         {isMenuOpen && (
           <div className="sm:hidden absolute left-0 right-0 top-16 z-50 bg-gray-900 shadow-lg">
             <div className="flex flex-col space-y-2 p-4">
+              <button
+                onClick={() => {
+                  handleTranslate();
+                  toggleMenu();
+                }}
+                className="block rounded-lg px-4 py-2 text-center font-medium hover:bg-gray-800"
+              >
+                EN • Translate
+              </button>
               <a 
                 href="#services" 
                 className="block rounded-lg px-4 py-2 text-center font-medium hover:bg-gray-800"
@@ -58,7 +72,7 @@ export default function Header() {
                 className="block rounded-lg px-4 py-2 text-center font-medium hover:bg-gray-800"
                 onClick={toggleMenu}
               >
-                Industrije
+                Reference
               </a>
               <a 
                 href="#contact" 
@@ -81,8 +95,9 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-4 text-sm font-medium sm:flex">
+          <button onClick={handleTranslate} className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950">EN</button>
           <a href="#services" className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950">Usluge</a>
-          <a href="#coverage" className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950">Industrije</a>
+          <a href="#coverage" className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950">Reference</a>
           <a href="#contact" className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950">Kontakt</a>
           <a href="tel:+491639071541" className="flex items-center gap-2 rounded-full bg-blue-500 px-4 py-2 text-white transition hover:bg-blue-600">
             <PhoneIcon className="h-5 w-5" />

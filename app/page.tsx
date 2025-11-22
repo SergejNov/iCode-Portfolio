@@ -31,10 +31,10 @@ export default function Home() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="flex flex-col items-center gap-8">
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 pb-1">
-                Marketinška agencija i izrada web sajtova koja donosi rast
+                Vaši ciljevi, naš marketing!
               </h1>
               <p className="text-xl text-zinc-300 max-w-3xl">
-                Strategija brenda, moderni sajtovi, SEO i performans marketing. Brze iteracije, jasna komunikacija i mjerljivi rezultati.
+                Mi smo agencija koja pretvara vaše ideje u rast. Kreiramo jasne strategije, kvalitetan sadržaj i kampanje koje donose rezultate. Bez komplikacija, bez praznih obećanja — samo pametan marketing koji radi za vas.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4 mt-4">
                 <a 
@@ -80,7 +80,7 @@ export default function Home() {
         icon: <ArrowTrendingUpIcon className="h-8 w-8 text-blue-400" />
       },
       { 
-        title: "Sadržaj i društvene mreže", 
+        title: "Sadržaj", 
         desc: "Planovi sadržaja, kreativna produkcija i distribucija.",
         icon: <ShareIcon className="h-8 w-8 text-blue-400" />
       },
@@ -122,7 +122,7 @@ export default function Home() {
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {[
                 { name: 'EUROexpress brza pošta', logo: '/euroexpreslogo.png', url: 'https://www.euroexpress.ba/' },
-                { name: 'Centar Trade', logo: '/Centrumlogo.png', url: 'https://centrumshop.ba/' },
+                { name: 'Centar Trade', logo: '/Centrum logo.png', url: 'https://centrumshop.ba/' },
                 { name: 'DM', logo: '/Logo_of_dm-drogerie_markt-Photoroom.png', url: 'https://www.dm-drogeriemarkt.ba/' },
                 { name: 'Sinsay', logo: '/sinsay-logo.png', url: 'https://www.sinsay.com/ba/bs/?srsltid=AfmBOoqWpH8lXSVfbrgmZBrBteDiDr03h9Q5_S9eSWAiqJ06FRluxrQH' },
                 { name: 'LC Waikiki', logo: '/LcWaiCropped.png', url: 'https://www.lcwaikiki.rs/sr-RS/RS' },
@@ -204,8 +204,8 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="border-t border-white/10 py-12 text-center text-sm text-zinc-500">
-        &copy; {new Date().getFullYear()} iCode Marketing. Sva prava zadržana.
+      <footer className="border-t border-white/10 py-10 text-center text-sm text-zinc-500">
+        &copy; {new Date().getFullYear()} iCode Marketing 2024. Sva prava zadržana.
       </footer>
     </div>
   );
