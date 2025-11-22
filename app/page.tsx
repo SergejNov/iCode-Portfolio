@@ -57,7 +57,7 @@ export default function Home() {
 
         {/* Services Section */}
         <section id="services" className="scroll-mt-20 py-16 sm:scroll-mt-24">
-          <div className="rounded-2xl border border-white/10 bg-blue-950/20 p-8 text-center sm:text-left shadow-sm sm:p-12">
+          <div className="rounded-2xl border-2 border-white/10 bg-blue-950/20 p-8 text-center sm:text-left shadow-sm sm:p-12">
   <h2 className="text-3xl font-semibold tracking-tight">Naše usluge</h2>
   <p className="mt-3 text-center text-base sm:text-left sm:max-w-2xl">
   Od strategije i dizajna do razvoja i rasta — isporuka od početka do kraja.
@@ -95,7 +95,7 @@ export default function Home() {
         icon: <MegaphoneIcon className="h-8 w-8 text-blue-400" />
       }
     ].map((service, index) => (
-      <div key={index} className="mx-auto w-full max-w-md rounded-xl border border-white/15 p-6 text-center transition hover:shadow-md hover:shadow-zinc-800/50 sm:mx-0 sm:max-w-none sm:text-left">
+      <div key={index} className="mx-auto w-full max-w-md rounded-xl border-2 border-white/15 p-6 text-center transition hover:shadow-md hover:shadow-zinc-800/50 sm:mx-0 sm:max-w-none sm:text-left">
         <div className="mb-4 flex justify-center sm:justify-start">
           <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-900/50">
             {service.icon}
@@ -114,7 +114,7 @@ export default function Home() {
 
         {/* Coverage Section */}
         <section id="coverage" className="scroll-mt-20 py-16 sm:scroll-mt-24">
-          <div className="rounded-2xl border border-white/10 bg-blue-950/20 p-8 shadow-sm sm:p-12">
+          <div className="rounded-2xl border-2 border-white/10 bg-blue-950/20 p-8 shadow-sm sm:p-12">
             <h2 className="text-3xl font-semibold tracking-tight">Brendovi s kojima radimo</h2>
             <p className="mt-3 max-w-2xl text-base text-zinc-300">
               Od startupa do etabliranih brendova — B2B i B2C.
@@ -133,7 +133,7 @@ export default function Home() {
                   href={company.url} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center rounded-xl border border-white/15 bg-blue-950/20 p-6 transition-all hover:bg-blue-950/40 hover:shadow-lg"
+                  className="flex items-center justify-center rounded-xl border-2 border-white/15 bg-blue-950/20 p-6 transition-all hover:bg-blue-950/40 hover:shadow-lg"
                 >
                   <img 
                     src={company.logo} 
@@ -149,7 +149,7 @@ export default function Home() {
 
         {/* Contact Section */}
         <section id="contact" className="scroll-mt-20 py-16 sm:scroll-mt-24">
-          <div className="rounded-2xl border border-white/10 bg-blue-950/20 p-8 shadow-sm sm:p-12">
+          <div className="rounded-2xl border-2 border-white/10 bg-blue-950/20 p-8 shadow-sm sm:p-12">
             <h2 className="text-3xl font-semibold tracking-tight">Kontakt</h2>
             <p className="mt-3 max-w-2xl text-base text-zinc-300">
               Pišite nam o svom projektu. Odgovaramo najčešće istog dana.
@@ -159,28 +159,42 @@ export default function Home() {
               <ContactForm />
               
               {/* Contact Information */}
-              <div className="rounded-xl border border-white/15 p-6">
+              <div className="rounded-xl border-2 border-white/15 p-6 text-center sm:text-left">
                 <div className="space-y-6">
                   <div>
                     <div className="text-lg font-semibold">Telefon</div>
-                    <a href="tel:+491639071541" className="mt-2 inline-flex items-center gap-2 rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 hover:bg-blue-950">
-                      <PhoneIcon className="h-4 w-4" />
-                      <span>+49 163 907 1541</span>
-                    </a>
+                    <div className="mt-2 sm:inline-block">
+                      <a href="tel:+491639071541" className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 hover:bg-blue-950 hover:border-blue-300 hover:text-blue-300 transition-all">
+                        <PhoneIcon className="h-4 w-4" />
+                        <span>+49 163 907 1541</span>
+                      </a>
+                    </div>
                   </div>
                   <div>
                     <div className="text-lg font-semibold">Email</div>
-                    <a href="mailto:info@icode-marketing.com" className="mt-2 inline-block rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 hover:bg-blue-950">info@icode-marketing.com</a>
+                    <div className="mt-2 sm:inline-block">
+                      <a href="mailto:info@icode-marketing.com" className="inline-block w-full max-w-xs overflow-hidden text-ellipsis whitespace-nowrap rounded-full border-2 border-blue-400 px-4 py-2 text-center text-blue-400 hover:bg-blue-950 sm:px-6 sm:text-left">
+                        info@icode-marketing.com
+                      </a>
+                    </div>
                   </div>
                   <div>
                     <div className="text-lg font-semibold">WhatsApp</div>
-                    <a href="https://wa.me/491639071541" target="_blank" rel="noopener noreferrer" className="mt-2 inline-block rounded-full border-2 border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-emerald-300 hover:bg-emerald-500/20">WhatsApp poruka</a>
+                    <div className="mt-2 sm:inline-block">
+                      <a href="https://wa.me/491639071541" target="_blank" rel="noopener noreferrer" className="inline-block rounded-full border-2 border-emerald-500/30 bg-emerald-500/10 px-6 py-2 text-emerald-300 hover:bg-emerald-500/20">
+                        WhatsApp poruka
+                      </a>
+                    </div>
                   </div>
                   <div>
                     <div className="text-lg font-semibold">Društvene mreže</div>
-                    <div className="mt-2 flex flex-wrap gap-3">
-                      <a className="inline-block rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 hover:bg-blue-950" href="https://www.instagram.com/icode.marketing" target="_blank" rel="noopener noreferrer">Instagram</a>
-                      <a className="inline-block rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 hover:bg-blue-950" href="https://www.facebook.com/share/1A65FdQSPv/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <div className="mt-3 flex flex-wrap justify-center gap-3 sm:justify-start">
+                      <a className="flex-shrink-0 whitespace-nowrap rounded-full border-2 border-blue-400 px-4 py-2 text-sm text-blue-400 hover:bg-blue-950 sm:text-base" href="https://www.instagram.com/icode.marketing" target="_blank" rel="noopener noreferrer">
+                        Instagram
+                      </a>
+                      <a className="flex-shrink-0 whitespace-nowrap rounded-full border-2 border-blue-400 px-4 py-2 text-sm text-blue-400 hover:bg-blue-950 sm:text-base" href="https://www.facebook.com/share/1A65FdQSPv/" target="_blank" rel="noopener noreferrer">
+                        Facebook
+                      </a>
                     </div>
                   </div>
                 </div>

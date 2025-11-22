@@ -53,7 +53,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="rounded-lg border border-white/15 px-6 pb-8 pt-6">
+    <form onSubmit={handleSubmit} className="rounded-lg border-2 border-white/15 px-6 pb-8 pt-6">
       <div className="space-y-4">
         {/* Honeypot field - hidden from humans but visible to bots */}
         <div className="absolute left-[-9999px] opacity-0">
@@ -70,27 +70,27 @@ export default function ContactForm() {
         
         <input 
     name="name"
-    className="w-full rounded-md border border-white/20 bg-black px-3 py-2 text-sm text-zinc-100 outline-none placeholder:text-zinc-400 focus:border-blue-500" 
+            className="w-full rounded-md border-2 border-white/20 bg-black px-3 py-2 text-sm text-zinc-100 outline-none placeholder:text-zinc-400 focus:border-blue-500" 
     placeholder="Vaše ime" 
     required
   />
   <input 
     name="email"
     type="email"
-    className="w-full rounded-md border border-white/20 bg-black px-3 py-2 text-sm text-zinc-100 outline-none placeholder:text-zinc-400 focus:border-blue-500" 
+            className="w-full rounded-md border-2 border-white/20 bg-black px-3 py-2 text-sm text-zinc-100 outline-none placeholder:text-zinc-400 focus:border-blue-500" 
     placeholder="Vaša email adresa" 
     required
   />
   <input 
     name="phone"
-    className="w-full rounded-md border border-white/20 bg-black px-3 py-2 text-sm text-zinc-100 outline-none placeholder:text-zinc-400 focus:border-blue-500" 
+            className="w-full rounded-md border-2 border-white/20 bg-black px-3 py-2 text-sm text-zinc-100 outline-none placeholder:text-zinc-400 focus:border-blue-500" 
     placeholder="Vaš broj telefona" 
     type="tel" 
     required
   />
   <textarea 
   name="message"
-  className="min-h-28 w-full rounded-md border border-white/20 bg-black px-3 pt-3 pb-4 text-sm text-zinc-100 outline-none placeholder:text-zinc-400 focus:border-blue-500" 
+  className="min-h-28 w-full rounded-md border-2 border-white/20 bg-black px-3 pt-3 pb-4 text-sm text-zinc-100 outline-none placeholder:text-zinc-400 focus:border-blue-500" 
   placeholder="Detalji projekta" 
   required
 />
@@ -98,7 +98,7 @@ export default function ContactForm() {
     <button 
       type="submit" 
       disabled={isLoading}
-      className="w-full rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-50"
+          className="w-full rounded-md border-2 border-blue-500 bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black disabled:cursor-not-allowed disabled:opacity-50"
     >
       {isLoading ? 'Slanje...' : 'Pošalji'}
     </button>
