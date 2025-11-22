@@ -82,15 +82,33 @@ export default function Home() {
         {/* Coverage Section */}
         <section id="coverage" className="scroll-mt-20 py-16 sm:scroll-mt-24">
           <div className="rounded-2xl border border-white/10 bg-blue-950/20 p-8 shadow-sm sm:p-12">
-            <h2 className="text-3xl font-semibold tracking-tight">Industrije s kojima radimo</h2>
+            <h2 className="text-3xl font-semibold tracking-tight">Brendovi s kojima radimo</h2>
             <p className="mt-3 max-w-2xl text-base text-zinc-300">
               Od startupa do etabliranih brendova — B2B i B2C.
             </p>
-            <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {['SaaS', 'e‑commerce', 'Tech Startups', 'Social Media Analytics', 'Social Media Advertising', 'UX/UI Dizajn'].map((industry, index) => (
-                <div key={index} className="rounded-xl border border-white/15 bg-blue-950/20 p-6 text-center text-lg font-medium">
-                  {industry}
-                </div>
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {[
+                { name: 'EUROexpress brza pošta', logo: '/euroexpreslogo.png', url: 'https://www.euroexpress.ba/' },
+                { name: 'Centar Trade', logo: '/Centrumlogo.png', url: 'https://centrumshop.ba/' },
+                { name: 'DM', logo: '/Logo_of_dm-drogerie_markt-Photoroom.png', url: 'https://www.dm-drogeriemarkt.ba/' },
+                { name: 'Sinsay', logo: '/sinsay-logo.png', url: 'https://www.sinsay.com/ba/bs/?srsltid=AfmBOoqWpH8lXSVfbrgmZBrBteDiDr03h9Q5_S9eSWAiqJ06FRluxrQH' },
+                { name: 'LC Waikiki', logo: '/LcWaiCropped.png', url: 'https://www.lcwaikiki.rs/sr-RS/RS' },
+                { name: 'Deichmann', logo: '/deichmann-logoCroped.png', url: 'https://www.deichmann.com/bs-ba/' }
+              ].map((company, index) => (
+                <a 
+                  key={index} 
+                  href={company.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center rounded-xl border border-white/15 bg-blue-950/20 p-6 transition-all hover:bg-blue-950/40 hover:shadow-lg"
+                >
+                  <img 
+                    src={company.logo} 
+                    alt={company.name} 
+                    className="h-16 object-contain"
+                    style={{ maxWidth: '200px' }}
+                  />
+                </a>
               ))}
             </div>
           </div>
