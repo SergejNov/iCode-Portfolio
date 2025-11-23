@@ -160,7 +160,7 @@ export default function Home() {
               <ContactForm />
               
               {/* Contact Information */}
-              <div className="mx-auto w-full max-w-md lg:mx-0 lg:max-w-none rounded-xl border-2 border-white/15 p-6 text-center sm:text-left">
+              <div className="w-full rounded-xl border-2 border-white/15 p-6 text-center sm:text-left">
                 <div className="space-y-6">
                   <div>
                     <div className="text-lg font-semibold">Telefon</div>
