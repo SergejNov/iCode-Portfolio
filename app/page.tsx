@@ -148,13 +148,14 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="scroll-mt-20 pt-8 pb-16 sm:scroll-mt-24 sm:pt-10 sm:pb-16">
-          <div className="rounded-2xl border-2 border-white/10 bg-blue-950/20 p-8 shadow-sm sm:p-12">
-            <h2 className="text-3xl font-semibold tracking-tight">Kontakt</h2>
-            <p className="mt-3 max-w-2xl text-base text-zinc-300">
-              Pišite nam o svom projektu. Odgovaramo najčešće istog dana.
-            </p>
-            <div className="mt-12 grid gap-8 lg:grid-cols-2 w-full">
+        <section id="contact" className="scroll-mt-20 pt-8 pb-10 sm:scroll-mt-24 sm:pt-12 sm:pb-12">
+          <div className="mx-auto max-w-7xl">
+            <div className="rounded-2xl border-2 border-white/10 bg-blue-950/20 p-6 shadow-sm sm:p-8 md:p-12">
+              <h2 className="text-3xl font-semibold tracking-tight">Kontakt</h2>
+              <p className="mt-3 max-w-2xl text-base text-zinc-300">
+                Pišite nam o svom projektu. Odgovaramo najčešće istog dana.
+              </p>
+              <div className="mt-12 grid gap-8 grid-cols-1 lg:grid-cols-2 w-full">
 
               {/* Contact Form */}
               <ContactForm />
@@ -202,7 +203,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
       </main>
 
       <footer className="border-t border-white/10 py-10 text-center text-sm text-zinc-500">
