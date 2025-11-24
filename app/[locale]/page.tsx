@@ -10,8 +10,10 @@ import {
   ChatBubbleLeftRightIcon,
   MegaphoneIcon
 } from '@heroicons/react/24/solid';
+import {useTranslations} from 'next-intl';
 
 export default function Home() {
+  const t = useTranslations();
   return (
     <div className="min-h-screen bg-black text-zinc-50">
       <div className="relative z-50">
@@ -31,10 +33,10 @@ export default function Home() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="flex flex-col items-center gap-8">
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 pb-1">
-                Vaši ciljevi, naš marketing!
+                {t('hero.title')}
               </h1>
               <p className="text-xl text-zinc-300 max-w-3xl">
-                Mi smo agencija koja pretvara vaše ideje u rast. Kreiramo jasne strategije, kvalitetan sadržaj i kampanje koje donose rezultate. Bez komplikacija, bez praznih obećanja — samo pametan marketing koji radi za vas.
+                {t('hero.subtitle')}
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4 mt-4">
                 <a 
@@ -42,13 +44,13 @@ export default function Home() {
                   className="flex items-center gap-2 rounded-full bg-blue-600 px-8 py-4 text-base font-medium text-white transition-all hover:bg-blue-700 hover:scale-105 transform"
                 >
                   <PhoneIcon className="h-5 w-5" />
-                  <span>Pozovi odmah</span>
+                  <span>{t('hero.callNow')}</span>
                 </a>
                 <a 
                   href="#services" 
                   className="rounded-full border-2 border-blue-400 px-8 py-4 text-base font-medium text-blue-400 hover:bg-blue-950/50 hover:border-blue-300 hover:text-blue-300 transition-all"
                 >
-                  Pogledaj usluge
+                  <span>{t('hero.viewServices')}</span>
                 </a>
               </div>
             </div>
@@ -58,40 +60,40 @@ export default function Home() {
         {/* Services Section */}
         <section id="services" className="scroll-mt-20 pt-16 pb-8 sm:scroll-mt-24 sm:pt-24 sm:pb-12">
           <div className="rounded-2xl border-2 border-white/10 bg-blue-950/20 p-8 text-center sm:text-left shadow-sm sm:p-12">
-  <h2 className="text-3xl font-semibold tracking-tight">Naše usluge</h2>
+  <h2 className="text-3xl font-semibold tracking-tight">{t('services.title')}</h2>
   <p className="mt-3 text-center text-base sm:text-left sm:max-w-2xl">
-  Od strategije i dizajna do razvoja i rasta — isporuka od početka do kraja.
+  {t('services.subtitle')}
 </p>
   <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
     {[
       { 
-        title: "Grafički dizajn", 
-        desc: "Vizuelni identitet, logo dizajn, brendiranje, marketing materijali.",
+        title: t('services.items.graphicDesign.title'), 
+        desc: t('services.items.graphicDesign.description'),
         icon: <PaintBrushIcon className="h-8 w-8 text-blue-400" />
       },
       { 
-        title: "Web development", 
-        desc: "Moderne web aplikacije, Next.js, React, e‑commerce, brzina i performanse.",
+        title: t('services.items.webDevelopment.title'), 
+        desc: t('services.items.webDevelopment.description'),
         icon: <CodeBracketIcon className="h-8 w-8 text-blue-400" />
       },
       { 
-        title: "SEO i rast", 
-        desc: "Tehnički SEO, analitika, reklamiranje, optimizacija konverzija.",
+        title: t('services.items.seo.title'), 
+        desc: t('services.items.seo.description'),
         icon: <ArrowTrendingUpIcon className="h-8 w-8 text-blue-400" />
       },
       { 
-        title: "Sadržaj", 
-        desc: "Planovi sadržaja, kreativna produkcija i distribucija.",
+        title: t('services.items.content.title'), 
+        desc: t('services.items.content.description'),
         icon: <ShareIcon className="h-8 w-8 text-blue-400" />
       },
       { 
-        title: "Social media marketing", 
-        desc: "Strategije za društvene mreže, reklamiranje, upravljanje sadržajem.",
+        title: t('services.items.socialMedia.title'), 
+        desc: t('services.items.socialMedia.description'),
         icon: <ChatBubbleLeftRightIcon className="h-8 w-8 text-blue-400" />
       },
       { 
-        title: "Google reklamiranje", 
-        desc: "Google Ads, PPC kampanje, pretraživačko i prikazno reklamiranje.",
+        title: t('services.items.googleAds.title'), 
+        desc: t('services.items.googleAds.description'),
         icon: <MegaphoneIcon className="h-8 w-8 text-blue-400" />
       }
     ].map((service, index) => (
@@ -115,9 +117,9 @@ export default function Home() {
         {/* Coverage Section */}
         <section id="coverage" className="scroll-mt-20 pt-8 pb-10 sm:scroll-mt-24 sm:pt-12 sm:pb-12">
           <div className="rounded-2xl border-2 border-white/10 bg-blue-950/20 p-8 shadow-sm sm:p-12">
-            <h2 className="text-3xl font-semibold tracking-tight">Brendovi s kojima radimo</h2>
+            <h2 className="text-3xl font-semibold tracking-tight">{t('coverage.title')}</h2>
             <p className="mt-3 max-w-2xl text-base text-zinc-300">
-              Od startupa do etabliranih brendova — B2B i B2C.
+              {t('coverage.subtitle')}
             </p>
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {[
@@ -151,9 +153,9 @@ export default function Home() {
         <section id="contact" className="scroll-mt-20 pt-8 pb-10 sm:scroll-mt-24 sm:pt-12 sm:pb-12">
           <div className="mx-auto max-w-7xl">
             <div className="rounded-2xl border-2 border-white/10 bg-blue-950/20 p-6 shadow-sm sm:p-8 md:p-12">
-              <h2 className="text-3xl font-semibold tracking-tight">Kontakt</h2>
+              <h2 className="text-3xl font-semibold tracking-tight">{t('contact.title')}</h2>
               <p className="mt-3 max-w-2xl text-base text-zinc-300">
-                Pišite nam o svom projektu. Odgovaramo najčešće istog dana.
+                {t('contact.subtitle')}
               </p>
               <div className="mt-12 grid gap-8 grid-cols-1 lg:grid-cols-2 w-full">
 
@@ -164,7 +166,7 @@ export default function Home() {
               <div className="w-full rounded-xl border-2 border-white/15 p-6 text-center sm:text-left">
                 <div className="space-y-6">
                   <div>
-                    <div className="text-lg font-semibold">Telefon</div>
+                    <div className="text-lg font-semibold">{t('contact.phone')}</div>
                     <div className="mt-2 sm:inline-block">
                       <a href="tel:+491639071541" className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 hover:bg-blue-950 hover:border-blue-300 hover:text-blue-300 transition-all">
                         <PhoneIcon className="h-4 w-4" />
@@ -173,7 +175,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div>
-                    <div className="text-lg font-semibold">Email</div>
+                    <div className="text-lg font-semibold">{t('contact.email')}</div>
                     <div className="mt-2 sm:inline-block">
                       <a href="mailto:info@icode-marketing.com" className="inline-block w-full max-w-xs overflow-hidden text-ellipsis whitespace-nowrap rounded-full border-2 border-blue-400 px-4 py-2 text-center text-blue-400 hover:bg-blue-950 sm:px-6 sm:text-left">
                         info@icode-marketing.com
@@ -181,15 +183,15 @@ export default function Home() {
                     </div>
                   </div>
                   <div>
-                    <div className="text-lg font-semibold">WhatsApp</div>
+                    <div className="text-lg font-semibold">{t('contact.whatsapp')}</div>
                     <div className="mt-2 sm:inline-block">
                       <a href="https://wa.me/491639071541" target="_blank" rel="noopener noreferrer" className="inline-block max-w-xs overflow-hidden text-ellipsis whitespace-nowrap rounded-full border-2 border-blue-400 px-4 py-2 text-center text-blue-400 hover:bg-blue-950 sm:px-6 sm:text-left">
-                        WhatsApp poruka
+                        {t('contact.whatsappMessage')}
                       </a>
                     </div>
                   </div>
                   <div>
-                    <div className="text-lg font-semibold">Društvene mreže</div>
+                    <div className="text-lg font-semibold">{t('contact.socialMedia')}</div>
                     <div className="mt-3 flex flex-wrap justify-center gap-3 sm:justify-start">
                       <a className="flex-shrink-0 whitespace-nowrap rounded-full border-2 border-blue-400 px-4 py-2 text-sm text-blue-400 hover:bg-blue-950 sm:text-base" href="https://www.instagram.com/icode.marketing" target="_blank" rel="noopener noreferrer">
                         Instagram
@@ -208,7 +210,7 @@ export default function Home() {
       </main>
 
       <footer className="border-t border-white/10 py-10 text-center text-sm text-zinc-500">
-        &copy; {new Date().getFullYear()} iCode Marketing 2024. Sva prava zadržana.
+        {t('footer.copyright', {year: new Date().getFullYear()})}
       </footer>
     </div>
   );

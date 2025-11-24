@@ -2,9 +2,11 @@
 
 import { useState } from 'react';
 import toast from 'react-hot-toast';
+import { useTranslations } from 'next-intl';
 const Kod = process.env.NEXT_PUBLIC_WEB3_KEY;
 
 export default function ContactForm() {
+  const t = useTranslations();
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -79,27 +81,27 @@ export default function ContactForm() {
         <input 
     name="name"
             className="w-full rounded-md border-2 border-white/20 bg-black px-3 py-2 text-sm text-zinc-100 outline-none placeholder:text-zinc-400 focus:border-blue-500" 
-    placeholder="Vaše ime" 
+    placeholder={t('contact.form.namePlaceholder')} 
     required
   />
   <input 
     name="email"
     type="email"
             className="w-full rounded-md border-2 border-white/20 bg-black px-3 py-2 text-sm text-zinc-100 outline-none placeholder:text-zinc-400 focus:border-blue-500" 
-    placeholder="Vaša email adresa" 
+    placeholder={t('contact.form.emailPlaceholder')} 
     required
   />
   <input 
     name="phone"
             className="w-full rounded-md border-2 border-white/20 bg-black px-3 py-2 text-sm text-zinc-100 outline-none placeholder:text-zinc-400 focus:border-blue-500" 
-    placeholder="Vaš broj telefona" 
+    placeholder={t('contact.form.phonePlaceholder')} 
     type="tel" 
     required
   />
   <textarea 
   name="message"
   className="min-h-28 w-full rounded-md border-2 border-white/20 bg-black px-3 pt-3 pb-4 text-sm text-zinc-100 outline-none placeholder:text-zinc-400 focus:border-blue-500" 
-  placeholder="Detalji projekta" 
+  placeholder={t('contact.form.messagePlaceholder')} 
   required
 />
   <div className="pt-6">
@@ -108,7 +110,7 @@ export default function ContactForm() {
       disabled={isLoading}
           className="w-full rounded-md border-2 border-blue-500 bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black disabled:cursor-not-allowed disabled:opacity-50"
     >
-      {isLoading ? 'Slanje...' : 'Pošalji'}
+      {isLoading ? 'Slanje...' : t('contact.form.send')}
     </button>
   </div>
 </div>
