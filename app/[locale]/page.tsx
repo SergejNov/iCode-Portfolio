@@ -106,7 +106,7 @@ export default function Home() {
         <h3 className="text-lg font-semibold">{service.title}</h3>
         <p className="mt-2 text-sm ">{service.desc}</p>
         <div className="mt-4 flex justify-center sm:justify-start">
-          <a href="#contact" className="inline-block rounded-full bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">Zatraži ponudu</a>
+          <a href="#contact" className="inline-block rounded-full bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">{t('services.requestQuote')}</a>
         </div>
       </div>
     ))}

@@ -95,7 +95,7 @@ export default function Header() {
                   onClick={() => setIsMobileLangOpen(v => !v)}
                   className="flex w-full items-center justify-center gap-2 rounded-lg border-2 border-blue-400 px-4 py-2 text-blue-400 hover:bg-blue-950"
                 >
-                  🌐 {t('navigation.language')}
+                  {t('navigation.language')}
                   <ChevronDownIcon className={`h-4 w-4 transition-transform ${isMobileLangOpen ? 'rotate-180' : ''}`} />
                 </button>
 
@@ -110,21 +110,21 @@ export default function Header() {
                           onClick={() => { changeLanguage('sr'); toggleMenu(); }}
                           className={`block w-full px-3 py-2 text-center hover:bg-gray-800 rounded-lg text-sm ${locale === 'sr' ? 'bg-blue-600 text-white' : ''}`}
                         >
-                          🇷🇸 {t('navigation.languages.sr')}
+                          {t('navigation.languages.sr')}
                         </button>
 
                         <button
                           onClick={() => { changeLanguage('en'); toggleMenu(); }}
                           className={`block w-full px-3 py-2 text-center hover:bg-gray-800 rounded-lg text-sm ${locale === 'en' ? 'bg-blue-600 text-white' : ''}`}
                         >
-                          🇬🇧 {t('navigation.languages.en')}
+                          {t('navigation.languages.en')}
                         </button>
 
                         <button
                           onClick={() => { changeLanguage('de'); toggleMenu(); }}
                           className={`block w-full px-3 py-2 text-center hover:bg-gray-800 rounded-lg text-sm ${locale === 'de' ? 'bg-blue-600 text-white' : ''}`}
                         >
-                          🇩🇪 {t('navigation.languages.de')}
+                          {t('navigation.languages.de')}
                         </button>
                       </div>
                     </div>
@@ -172,7 +172,7 @@ export default function Header() {
               onClick={() => setIsLangOpen(v => !v)}
               className="flex items-center gap-2 rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 hover:bg-blue-950"
             >
-              🌐 {t('navigation.language')}
+              {t('navigation.language')}
               <ChevronDownIcon className={`h-4 w-4 transition-transform ${isLangOpen ? 'rotate-180' : ''}`} />
             </button>
 
@@ -187,21 +187,21 @@ export default function Header() {
                       onClick={() => { changeLanguage('sr'); setIsLangOpen(false); }}
                       className={`block w-full px-3 py-2 text-left hover:bg-gray-800 rounded-lg text-sm ${locale === 'sr' ? 'bg-blue-600 text-white' : ''}`}
                     >
-                      🇷🇸 {t('navigation.languages.sr')}
+                      {t('navigation.languages.sr')}
                     </button>
 
                     <button
                       onClick={() => { changeLanguage('en'); setIsLangOpen(false); }}
                       className={`block w-full px-3 py-2 text-left hover:bg-gray-800 rounded-lg text-sm ${locale === 'en' ? 'bg-blue-600 text-white' : ''}`}
                     >
-                      🇬🇧 {t('navigation.languages.en')}
+                      {t('navigation.languages.en')}
                     </button>
 
                     <button
                       onClick={() => { changeLanguage('de'); setIsLangOpen(false); }}
                       className={`block w-full px-3 py-2 text-left hover:bg-gray-800 rounded-lg text-sm ${locale === 'de' ? 'bg-blue-600 text-white' : ''}`}
                     >
-                      🇩🇪 {t('navigation.languages.de')}
+                      {t('navigation.languages.de')}
                     </button>
                   </div>
                 </div>
