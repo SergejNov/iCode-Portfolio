@@ -9,7 +9,7 @@ export default {
   },
   hero: {
     title: "Vaši ciljevi, naš marketing!",
-    subtitle: "Mi smo agencija koja pretvara vaše ideje u rast. Kreiramo jasne strategije, kvalitetan sadržaj i kampanje koje donose rezultate. Bez komplikacija, bez praznih obećanja — samo pametan marketing koji radi za vas.",
+    subtitle: "Mi smo internacionalna marketinška agencija s više od 10 godina opravdanog iskustva i preko 1000 zadovoljnih klijenata. Pomažemo brendovima da rastu, povećaju online vidljivost i ostvare mjerljive rezultate kroz kreativne i strateške marketinške kampanje.",
     callNow: "Pozovi odmah",
     viewServices: "Pogledaj usluge"
   },

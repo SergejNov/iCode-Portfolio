@@ -9,7 +9,7 @@ export default {
   },
   hero: {
     title: "Ihre Ziele, unser Marketing!",
-    subtitle: "Wir sind eine Agentur, die Ihre Ideen in Wachstum verwandelt. Wir erstellen klare Strategien, qualitativ hochwertige Inhalte und Kampagnen, die Ergebnisse liefern. Ohne Komplikationen, ohne leere Versprechungen — nur intelligentes Marketing, das für Sie funktioniert.",
+    subtitle: "Wir sind eine internationale Marketingagentur mit über 10 Jahren nachgewiesener Erfahrung und über 1000 zufriedenen Kunden. Wir helfen Marken, zu wachsen, ihre Online-Sichtbarkeit zu erhöhen und messbare Ergebnisse durch kreative und strategische Marketingkampagnen zu erzielen.",
     callNow: "Jetzt anrufen",
     viewServices: "Services ansehen"
   },

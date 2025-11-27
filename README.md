@@ -18,7 +18,7 @@ A modern, responsive portfolio website for iCode Marketing agency built with Nex
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Deployment**: Vercel
-- **Forms**: React with API routes    a
+- **Forms**: React with API routes    
 
 ## 📦 Getting Started
 

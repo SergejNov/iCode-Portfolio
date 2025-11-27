@@ -9,7 +9,7 @@ export default {
   },
   hero: {
     title: "Your goals, our marketing!",
-    subtitle: "We are an agency that turns your ideas into growth. We create clear strategies, quality content and campaigns that deliver results. No complications, no empty promises — just smart marketing that works for you.",
+    subtitle: "We are an international marketing agency with over 10 years of proven experience and over 1000 satisfied clients. We help brands grow, increase online visibility and achieve measurable results through creative and strategic marketing campaigns.",
     callNow: "Call now",
     viewServices: "View services"
   },
