@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { 
   PhoneIcon,
   PaintBrushIcon,
@@ -582,9 +583,7 @@ export default function Services() {
         </section>
       </main>
 
-      <footer className="border-t border-white/10 py-10 text-center text-sm text-zinc-500">
-        {t('footer.copyright', {year: new Date().getFullYear()})}
-      </footer>
+      <Footer />
     </div>
   );
 }

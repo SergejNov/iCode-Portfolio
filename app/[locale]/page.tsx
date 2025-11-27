@@ -1,6 +1,7 @@
 
 import ContactForm from "./components/ContactForm";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import { 
   PhoneIcon,
   PaintBrushIcon,
@@ -105,7 +106,7 @@ export default function Home() {
         link: "/services#google-ads"
       }
     ].map((service, index) => (
-              <div className="mx-auto w-full max-w-md rounded-xl border-2 border-white/15 p-6 text-center transition hover:shadow-md hover:shadow-zinc-800/50 hover:scale-105 transform sm:mx-0 sm:max-w-none sm:text-left">
+              <div key={index} className="mx-auto w-full max-w-md rounded-xl border-2 border-white/15 p-6 text-center transition hover:shadow-md hover:shadow-zinc-800/50 hover:scale-105 transform sm:mx-0 sm:max-w-none sm:text-left">
         <div className="mb-4 flex justify-center sm:justify-start">
           <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-900/50 hover:bg-blue-800/50 transition-all hover:scale-110 transform">
             {service.icon}
@@ -219,9 +220,7 @@ export default function Home() {
       </section>
       </main>
 
-      <footer className="border-t border-white/10 py-10 text-center text-sm text-zinc-500">
-        {t('footer.copyright', {year: new Date().getFullYear()})}
-      </footer>
+      <Footer />
     </div>
   );
 }
