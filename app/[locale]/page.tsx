@@ -8,7 +8,8 @@ import {
   ArrowTrendingUpIcon,
   ShareIcon,
   ChatBubbleLeftRightIcon,
-  MegaphoneIcon
+  MegaphoneIcon,
+  ArrowRightIcon
 } from '@heroicons/react/24/solid';
 import {useTranslations} from 'next-intl';
 
@@ -41,16 +42,17 @@ export default function Home() {
               <div className="flex flex-wrap items-center justify-center gap-4 mt-4">
                 <a 
                   href="tel:+491639071541" 
-                  className="flex items-center gap-2 rounded-full bg-blue-600 px-8 py-4 text-base font-medium text-white transition-all hover:bg-blue-700 hover:scale-105 transform"
+                  className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-base font-medium text-white transition-all hover:bg-blue-700 hover:scale-105 transform"
                 >
                   <PhoneIcon className="h-5 w-5" />
                   <span>{t('hero.callNow')}</span>
                 </a>
                 <a 
-                  href="#services" 
-                  className="rounded-full border-2 border-blue-400 px-8 py-4 text-base font-medium text-blue-400 hover:bg-blue-950/50 hover:border-blue-300 hover:text-blue-300 transition-all"
+                  href="/services" 
+                  className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-base font-medium text-white transition-all hover:bg-blue-700 hover:scale-105 transform"
                 >
-                  <span>{t('hero.viewServices')}</span>
+                  {t('hero.viewServices')}
+                  <ArrowRightIcon className="h-5 w-5" />
                 </a>
               </div>
             </div>
@@ -69,45 +71,53 @@ export default function Home() {
       { 
         title: t('services.items.graphicDesign.title'), 
         desc: t('services.items.graphicDesign.description'),
-        icon: <PaintBrushIcon className="h-8 w-8 text-blue-400" />
+        icon: <PaintBrushIcon className="h-8 w-8 text-blue-400" />,
+        link: "/services#graphic-design"
       },
       { 
         title: t('services.items.webDevelopment.title'), 
         desc: t('services.items.webDevelopment.description'),
-        icon: <CodeBracketIcon className="h-8 w-8 text-blue-400" />
+        icon: <CodeBracketIcon className="h-8 w-8 text-blue-400" />,
+        link: "/services#web-development"
       },
       { 
         title: t('services.items.seo.title'), 
         desc: t('services.items.seo.description'),
-        icon: <ArrowTrendingUpIcon className="h-8 w-8 text-blue-400" />
+        icon: <ArrowTrendingUpIcon className="h-8 w-8 text-blue-400" />,
+        link: "/services#seo"
       },
       { 
         title: t('services.items.content.title'), 
         desc: t('services.items.content.description'),
-        icon: <ShareIcon className="h-8 w-8 text-blue-400" />
+        icon: <ShareIcon className="h-8 w-8 text-blue-400" />,
+        link: "/services#content"
       },
       { 
         title: t('services.items.socialMedia.title'), 
         desc: t('services.items.socialMedia.description'),
-        icon: <ChatBubbleLeftRightIcon className="h-8 w-8 text-blue-400" />
+        icon: <ChatBubbleLeftRightIcon className="h-8 w-8 text-blue-400" />,
+        link: "/services#social-media"
       },
       { 
         title: t('services.items.googleAds.title'), 
         desc: t('services.items.googleAds.description'),
-        icon: <MegaphoneIcon className="h-8 w-8 text-blue-400" />
+        icon: <MegaphoneIcon className="h-8 w-8 text-blue-400" />,
+        link: "/services#google-ads"
       }
     ].map((service, index) => (
-      <div key={index} className="mx-auto w-full max-w-md rounded-xl border-2 border-white/15 p-6 text-center transition hover:shadow-md hover:shadow-zinc-800/50 sm:mx-0 sm:max-w-none sm:text-left">
+              <div className="mx-auto w-full max-w-md rounded-xl border-2 border-white/15 p-6 text-center transition hover:shadow-md hover:shadow-zinc-800/50 hover:scale-105 transform sm:mx-0 sm:max-w-none sm:text-left">
         <div className="mb-4 flex justify-center sm:justify-start">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-900/50">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-900/50 hover:bg-blue-800/50 transition-all hover:scale-110 transform">
             {service.icon}
           </div>
         </div>
-        <h3 className="text-lg font-semibold">{service.title}</h3>
-        <p className="mt-2 text-sm ">{service.desc}</p>
-        <div className="mt-4 flex justify-center sm:justify-start">
-          <a href="#contact" className="inline-block rounded-full bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">{t('services.requestQuote')}</a>
-        </div>
+        <h3 className="text-lg font-semibold">
+          <a href={service.link} className="hover:text-blue-400 transition-colors hover:scale-105 transition-all transform">
+            {service.title}
+          </a>
+        </h3>
+        <p className="mt-2 text-sm mb-6">{service.desc}</p>
+        <a href={service.link} className="inline-block rounded-full bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 hover:scale-105 transition-all transform">{t('services.requestQuote')}</a>
       </div>
     ))}
   </div>
@@ -135,12 +145,12 @@ export default function Home() {
                   href={company.url} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center rounded-xl border-2 border-white/15 bg-blue-950/20 p-6 transition-all hover:bg-blue-950/40 hover:shadow-lg"
+                  className="flex items-center justify-center rounded-xl border-2 border-white/15 bg-blue-950/20 p-6 transition-all hover:bg-blue-950/40 hover:shadow-lg hover:scale-105 transform"
                 >
                   <img 
                     src={company.logo} 
                     alt={company.name} 
-                    className="h-16 object-contain"
+                    className="h-16 object-contain transition-all hover:scale-110 transform"
                     style={{ maxWidth: '200px' }}
                   />
                 </a>

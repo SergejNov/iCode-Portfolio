@@ -54,17 +54,21 @@ export default function Header() {
     };
   }, []);
 
+  const isServicesPage = pathname.includes('/services');
+
   return (
     <header className="fixed left-0 right-0 top-0 z-40 border-b border-white/10 backdrop-blur-md bg-gray-900/80">
       <div className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
         <div className="flex items-center gap-3">
-          <Image 
-            src="/iCodeLogoCroped.png" 
-            alt="iCode Marketing logo" 
-            width={48} 
-            height={48} 
-            className="h-12 w-12" 
-          />
+          <Link href="/" className="hover:opacity-80 transition-opacity">
+            <Image 
+              src="/iCodeLogoCroped.png" 
+              alt="iCode Marketing logo" 
+              width={48} 
+              height={48} 
+              className="h-12 w-12" 
+            />
+          </Link>
           
         </div>
 
@@ -93,7 +97,7 @@ export default function Header() {
               <div className="relative">
                 <button
                   onClick={() => setIsMobileLangOpen(v => !v)}
-                  className="flex w-full items-center justify-center gap-2 rounded-lg border-2 border-blue-400 px-4 py-2 text-blue-400 hover:bg-blue-950"
+                  className="flex w-full items-center justify-center gap-2 rounded-lg border-2 border-blue-400 px-4 py-2 text-blue-400 hover:bg-blue-950 cursor-pointer"
                 >
                   {t('navigation.language')}
                   <ChevronDownIcon className={`h-4 w-4 transition-transform ${isMobileLangOpen ? 'rotate-180' : ''}`} />
@@ -108,21 +112,21 @@ export default function Header() {
                       <div className="mt-1 space-y-1">
                         <button
                           onClick={() => { changeLanguage('sr'); toggleMenu(); }}
-                          className={`block w-full px-3 py-2 text-center hover:bg-gray-800 rounded-lg text-sm ${locale === 'sr' ? 'bg-blue-600 text-white' : ''}`}
+                          className={`block w-full px-3 py-2 text-center hover:bg-gray-800 rounded-lg text-sm cursor-pointer ${locale === 'sr' ? 'bg-blue-600 text-white' : ''}`}
                         >
                           {t('navigation.languages.sr')}
                         </button>
 
                         <button
                           onClick={() => { changeLanguage('en'); toggleMenu(); }}
-                          className={`block w-full px-3 py-2 text-center hover:bg-gray-800 rounded-lg text-sm ${locale === 'en' ? 'bg-blue-600 text-white' : ''}`}
+                          className={`block w-full px-3 py-2 text-center hover:bg-gray-800 rounded-lg text-sm cursor-pointer ${locale === 'en' ? 'bg-blue-600 text-white' : ''}`}
                         >
                           {t('navigation.languages.en')}
                         </button>
 
                         <button
                           onClick={() => { changeLanguage('de'); toggleMenu(); }}
-                          className={`block w-full px-3 py-2 text-center hover:bg-gray-800 rounded-lg text-sm ${locale === 'de' ? 'bg-blue-600 text-white' : ''}`}
+                          className={`block w-full px-3 py-2 text-center hover:bg-gray-800 rounded-lg text-sm cursor-pointer ${locale === 'de' ? 'bg-blue-600 text-white' : ''}`}
                         >
                           {t('navigation.languages.de')}
                         </button>
@@ -132,24 +136,51 @@ export default function Header() {
                 )}
               </div>
 
-              <Link 
-                href="#services" 
-                className="block rounded-lg border-2 border-blue-400 px-4 py-2 text-center font-medium text-blue-400 hover:bg-blue-950"
-                onClick={toggleMenu}
-              >
-                {t('navigation.services')}
-              </Link>
-              <Link 
-                href="#coverage" 
-                className="block rounded-lg border-2 border-blue-400 px-4 py-2 text-center font-medium text-blue-400 hover:bg-blue-950"
-                onClick={toggleMenu}
-              >
-                {t('navigation.references')}
-              </Link>
+              {/* Show Home button on services page */}
+              {isServicesPage && (
+                <Link 
+                  href="/" 
+                  className="block rounded-lg border-2 border-blue-400 px-4 py-2 text-center font-medium text-blue-400 hover:bg-blue-950"
+                  onClick={toggleMenu}
+                >
+                  Home
+                </Link>
+              )}
+
+              {/* Hide services and coverage on services page */}
+              {!isServicesPage && (
+                <>
+                  <Link 
+                    href="/services" 
+                    className="block rounded-lg border-2 border-blue-400 px-4 py-2 text-center font-medium text-blue-400 hover:bg-blue-950"
+                    onClick={toggleMenu}
+                  >
+                    {t('navigation.services')}
+                  </Link>
+                  <Link 
+                    href="#coverage" 
+                    className="block rounded-lg border-2 border-blue-400 px-4 py-2 text-center font-medium text-blue-400 hover:bg-blue-950"
+                    onClick={toggleMenu}
+                  >
+                    {t('navigation.references')}
+                  </Link>
+                </>
+              )}
+              
               <Link 
                 href="#contact" 
                 className="block rounded-lg border-2 border-blue-400 px-4 py-2 text-center font-medium text-blue-400 hover:bg-blue-950"
-                onClick={toggleMenu}
+                onClick={isServicesPage ? (e) => {
+                  e.preventDefault();
+                  const element = document.getElementById('contact');
+                  if (element) {
+                    element.scrollIntoView({ 
+                      behavior: 'smooth',
+                      block: 'start'
+                    });
+                  }
+                  toggleMenu();
+                } : toggleMenu}
               >
                 {t('navigation.contact')}
               </Link>
@@ -170,7 +201,7 @@ export default function Header() {
           <div className="relative" ref={langDropdownRef}>
             <button
               onClick={() => setIsLangOpen(v => !v)}
-              className="flex items-center gap-2 rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 hover:bg-blue-950"
+              className="flex items-center gap-2 rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 hover:bg-blue-950 cursor-pointer"
             >
               {t('navigation.language')}
               <ChevronDownIcon className={`h-4 w-4 transition-transform ${isLangOpen ? 'rotate-180' : ''}`} />
@@ -185,21 +216,21 @@ export default function Header() {
                   <div className="mt-1 space-y-1">
                     <button
                       onClick={() => { changeLanguage('sr'); setIsLangOpen(false); }}
-                      className={`block w-full px-3 py-2 text-left hover:bg-gray-800 rounded-lg text-sm ${locale === 'sr' ? 'bg-blue-600 text-white' : ''}`}
+                      className={`block w-full px-3 py-2 text-left hover:bg-gray-800 rounded-lg text-sm cursor-pointer ${locale === 'sr' ? 'bg-blue-600 text-white' : ''}`}
                     >
                       {t('navigation.languages.sr')}
                     </button>
 
                     <button
                       onClick={() => { changeLanguage('en'); setIsLangOpen(false); }}
-                      className={`block w-full px-3 py-2 text-left hover:bg-gray-800 rounded-lg text-sm ${locale === 'en' ? 'bg-blue-600 text-white' : ''}`}
+                      className={`block w-full px-3 py-2 text-left hover:bg-gray-800 rounded-lg text-sm cursor-pointer ${locale === 'en' ? 'bg-blue-600 text-white' : ''}`}
                     >
                       {t('navigation.languages.en')}
                     </button>
 
                     <button
                       onClick={() => { changeLanguage('de'); setIsLangOpen(false); }}
-                      className={`block w-full px-3 py-2 text-left hover:bg-gray-800 rounded-lg text-sm ${locale === 'de' ? 'bg-blue-600 text-white' : ''}`}
+                      className={`block w-full px-3 py-2 text-left hover:bg-gray-800 rounded-lg text-sm cursor-pointer ${locale === 'de' ? 'bg-blue-600 text-white' : ''}`}
                     >
                       {t('navigation.languages.de')}
                     </button>
@@ -209,9 +240,35 @@ export default function Header() {
             )}
           </div>
 
-          <Link href="#services" className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950">{t('navigation.services')}</Link>
-          <Link href="#coverage" className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950">{t('navigation.references')}</Link>
-          <Link href="#contact" className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950">{t('navigation.contact')}</Link>
+          {/* Show Home button on services page */}
+          {isServicesPage && (
+            <Link href="/" className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950">Home</Link>
+          )}
+
+          {/* Hide services and coverage on services page */}
+          {!isServicesPage && (
+            <>
+              <Link href="/services" className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950">{t('navigation.services')}</Link>
+              <Link href="#coverage" className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950">{t('navigation.references')}</Link>
+            </>
+          )}
+          
+          <Link 
+            href={isServicesPage ? "#contact" : "#contact"} 
+            className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950"
+            onClick={isServicesPage ? (e) => {
+              e.preventDefault();
+              const element = document.getElementById('contact');
+              if (element) {
+                element.scrollIntoView({ 
+                  behavior: 'smooth',
+                  block: 'start'
+                });
+              }
+            } : undefined}
+          >
+            {t('navigation.contact')}
+          </Link>
           <a href="tel:+491639071541" className="flex items-center gap-2 rounded-full bg-blue-500 px-4 py-2 text-white transition hover:bg-blue-600">
             <PhoneIcon className="h-5 w-5" />
             <span>+49 163 9071541</span>

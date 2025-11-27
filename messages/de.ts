@@ -16,7 +16,7 @@ export default {
   services: {
     title: "Unsere Dienstleistungen",
     subtitle: "Von Strategie und Design bis hin zu Entwicklung und Wachstum — Lieferung von Anfang bis Ende.",
-    requestQuote: "Angebot anfordern",
+    requestQuote: "Weitere Informationen",
     items: {
       graphicDesign: {
         title: "Grafikdesign",

@@ -16,7 +16,7 @@ export default {
   services: {
     title: "Our services",
     subtitle: "From strategy and design to development and growth — delivery from start to finish.",
-    requestQuote: "Request quote",
+    requestQuote: "More information",
     items: {
       graphicDesign: {
         title: "Graphic design",
