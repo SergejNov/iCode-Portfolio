@@ -102,7 +102,7 @@ export default function Services() {
                   <h3 className="text-lg font-semibold text-blue-400">{t('servicesPage.sections.graphicDesign.approachTitle')}</h3>
                 </div>
                 <p className="text-zinc-300 mb-4">
-                  {t('servicesPage.sections.graphicDesign.approachDescription')}
+                  {t('servicesPage.sections.graphicDesign.approachDescription2')}
                 </p>
                 <div className="bg-blue-900/20 rounded-lg p-4 border border-blue-700/30">
                   <p className="text-sm text-blue-300">

@@ -20,7 +20,7 @@ export default {
     items: {
       graphicDesign: {
         title: "Graphic design",
-        description: "Visual identity, logo design, branding, marketing materials."
+        description: "Transform your brand identity with stunning visual designs that capture attention and communicate your unique value proposition across all marketing channels."
       },
       webDevelopment: {
         title: "Web development",
@@ -90,7 +90,8 @@ export default {
     sections: {
       graphicDesign: {
         approachTitle: "Our approach",
-        approachDescription: "Every project begins with a detailed analysis of your brand, target audience, and competition. We create design that is not just beautiful, but also strategically effective.",
+        approachDescription: "Our design process combines strategic thinking with creative execution. We dive deep into understanding your business goals, market position, and customer psychology to deliver designs that not only look stunning but drive measurable results and create lasting brand impact.",
+        approachDescription2: "We believe in collaborative design that puts your vision at the center. Through iterative feedback sessions and data-driven insights, we craft visual solutions that evolve with your brand and consistently exceed expectations.",
         quote: "\"Good design is visible, great design is transparent.\" - Joe Sparano",
         whatWeOffer: "What we offer:",
         items: {

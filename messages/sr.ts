@@ -20,7 +20,7 @@ export default {
     items: {
       graphicDesign: {
         title: "Grafički dizajn",
-        description: "Vizuelni identitet, logo dizajn, brendiranje, marketing materijali."
+        description: "Transformišite identitet svog brenda sa zadivljujućim vizuelnim dizajnima koji privlače pažnju i komuniciraju vašu jedinstvenu vrednosnu ponudu na svim marketing kanalima."
       },
       webDevelopment: {
         title: "Web development",
@@ -90,7 +90,8 @@ export default {
     sections: {
       graphicDesign: {
         approachTitle: "Naš pristup",
-        approachDescription: "Svaki projekat započinjemo detaljnom analizom vašeg brenda, ciljne publike i konkurencije. Kreiramo dizajn koji nije samo lepo, već i strateški efikasan.",
+        approachDescription: "Naš dizajn proces kombinuje strateško razmišljanje sa kreativnom izvršbom. Zaronimo duboko u razumevanje vaših poslovnih ciljeva, tržišne pozicije i psihologije kupaca da dostavimo dizajne koji ne samo izgledaju zadivljujuće, već ostvaruju merljive rezultate i stvaraju dugotrajan uticaj brenda.",
+        approachDescription2: "Verujemo u kollaborativni dizajn koji stavlja vašu viziju u centar. Kroz iterativne sesije povratnih informacija i uvide zasnovane na podacima, kreiramo vizuelna rešenja koja se razvijaju sa vašim brendom i konzistentno prevazilaze očekivanja.",
         quote: "\"Dobar dizajn je vidljiv, odličan dizajn je transparentan.\" - Joe Sparano",
         whatWeOffer: "Šta nudimo:",
         items: {

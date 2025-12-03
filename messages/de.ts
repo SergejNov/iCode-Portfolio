@@ -20,7 +20,7 @@ export default {
     items: {
       graphicDesign: {
         title: "Grafikdesign",
-        description: "Visuelle Identität, Logodesign, Branding, Marketingmaterialien."
+        description: "Transformieren Sie Ihre Markenidentität mit beeindruckenden visuellen Designs, die Aufmerksamkeit erregen und Ihr einzigartiges Wertversprechen über alle Marketingkanäle hinweg kommunizieren."
       },
       webDevelopment: {
         title: "Web-Entwicklung",
@@ -90,7 +90,8 @@ export default {
     sections: {
       graphicDesign: {
         approachTitle: "Unser Ansatz",
-        approachDescription: "Jedes Projekt beginnt mit einer detaillierten Analyse Ihrer Marke, Zielgruppe und Konkurrenz. Wir schaffen Design, das nicht nur schön, sondern auch strategisch effektiv ist.",
+        approachDescription: "Unser Designprozess verbindet strategisches Denken mit kreativer Umsetzung. Wir tauchen tief ein, um Ihre Geschäftsziele, Marktposition und Kundenpsychologie zu verstehen und liefern Designs, die nicht nur beeindruckend aussehen, sondern messbare Ergebnisse erzielen und eine langanhaltende Markenwirkung schaffen.",
+        approachDescription2: "Wir glauben an kollaboratives Design, das Ihre Vision in den Mittelpunkt stellt. Durch iteratives Feedback und datengestützte Einblicke schaffen wir visuelle Lösungen, die sich mit Ihrer Marke weiterentwickeln und konsistent Erwartungen übertreffen.",
         quote: "\"Gutes Design ist sichtbar, großartiges Design ist transparent.\" - Joe Sparano",
         whatWeOffer: "Was wir bieten:",
         items: {
