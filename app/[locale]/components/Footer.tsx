@@ -16,11 +16,6 @@ export default function Footer() {
               className="text-zinc-300 text-sm"
               dangerouslySetInnerHTML={{ __html: t('footer.companyInfo') }}
             />
-            <p className="text-zinc-300 text-sm mt-1">
-              <a href={`tel:${t('footer.phone')}`} className="hover:text-blue-400 transition-colors">
-                {t('footer.phone')}
-              </a>
-            </p>
           </div>
 
           {/* Legal Links */}

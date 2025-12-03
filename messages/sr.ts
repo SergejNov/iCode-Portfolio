@@ -568,7 +568,7 @@ export default {
     }
   },
   footer: {
-    companyInfo: "Marketinška agencija iCode<br />Gornja Dolina 29 78400 Gradiška<br />Bosna i Hercegovina",
+    companyInfo: "Marketinška agencija iCode<br />Gradiška, Bosna i Hercegovina",
     phone: "+49 163 9071541",
     legalLinks: {
       terms: "Uslovi korišćenja",
