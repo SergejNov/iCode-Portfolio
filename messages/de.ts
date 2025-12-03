@@ -458,7 +458,7 @@ export default {
       }
     },
     disclaimer: {
-      title: "Disclaimer",
+      title: "Haftungsausschluss",
       sections: {
         generalInfo: {
           title: "Allgemeine Informationen",
@@ -573,7 +573,7 @@ export default {
     legalLinks: {
       terms: "Allgemeine Geschäftsbedingungen",
       privacy: "Datenschutzerklärung",
-      disclaimer: "Disclaimer"
+      disclaimer: "Haftungsausschluss"
     },
     copyright: "© {year} iCode Marketing. Alle Rechte vorbehalten."
   }

@@ -458,7 +458,7 @@ export default {
       }
     },
     disclaimer: {
-      title: "Disclaimer",
+      title: "Odricanje odgovornosti",
       sections: {
         generalInfo: {
           title: "Opšte informacije",
@@ -573,7 +573,7 @@ export default {
     legalLinks: {
       terms: "Uslovi korišćenja",
       privacy: "Politika privatnosti",
-      disclaimer: "Disclaimer"
+      disclaimer: "Odricanje odgovornosti"
     },
     copyright: "© {year} iCode Marketing. Sva prava zadržana."
   }
