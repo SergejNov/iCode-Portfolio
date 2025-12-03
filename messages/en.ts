@@ -20,7 +20,7 @@ export default {
     items: {
       graphicDesign: {
         title: "Graphic design",
-        description: "Transform your brand identity with stunning visual designs that capture attention and communicate your unique value proposition across all marketing channels."
+        description: "Visual identity, logo design, branding, marketing materials."
       },
       webDevelopment: {
         title: "Web development",

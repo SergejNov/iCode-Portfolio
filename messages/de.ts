@@ -20,7 +20,7 @@ export default {
     items: {
       graphicDesign: {
         title: "Grafikdesign",
-        description: "Transformieren Sie Ihre Markenidentität mit beeindruckenden visuellen Designs, die Aufmerksamkeit erregen und Ihr einzigartiges Wertversprechen über alle Marketingkanäle hinweg kommunizieren."
+        description: "Visuelle Identität, Logodesign, Branding, Marketingmaterialien."
       },
       webDevelopment: {
         title: "Web-Entwicklung",

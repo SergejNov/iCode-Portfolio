@@ -16,11 +16,11 @@ export default {
   services: {
     title: "Naše usluge",
     subtitle: "Od strategije i dizajna do razvoja i rasta — isporuka od početka do kraja.",
-    requestQuote: "Zatraži ponudu",
+    requestQuote: "Više informacija",
     items: {
       graphicDesign: {
         title: "Grafički dizajn",
-        description: "Transformišite identitet svog brenda sa zadivljujućim vizuelnim dizajnima koji privlače pažnju i komuniciraju vašu jedinstvenu vrednosnu ponudu na svim marketing kanalima."
+        description: "Vizuelni identitet, logo dizajn, brendiranje, marketing materijali."
       },
       webDevelopment: {
         title: "Web development",
