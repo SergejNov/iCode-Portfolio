@@ -458,7 +458,7 @@ export default {
       }
     },
     disclaimer: {
-      title: "Haftung",
+      title: "Haftungsausschluss",
       sections: {
         generalInfo: {
           title: "Allgemeine Informationen",
