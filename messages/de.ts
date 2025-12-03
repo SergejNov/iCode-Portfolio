@@ -458,7 +458,7 @@ export default {
       }
     },
     disclaimer: {
-      title: "Haftungsausschluss",
+      title: "Haftung",
       sections: {
         generalInfo: {
           title: "Allgemeine Informationen",
@@ -571,9 +571,9 @@ export default {
     companyInfo: "Marketingagentur iCode<br />Gornja Dolina 29 78400 Gradiška<br />Bosnien und Herzegowina",
     phone: "+49 163 9071541",
     legalLinks: {
-      terms: "Allgemeine Geschäftsbedingungen",
-      privacy: "Datenschutzerklärung",
-      disclaimer: "Haftungsausschluss"
+      terms: "AGB",
+      privacy: "Datenschutz",
+      disclaimer: "Haftung"
     },
     copyright: "© {year} iCode Marketing. Alle Rechte vorbehalten."
   }

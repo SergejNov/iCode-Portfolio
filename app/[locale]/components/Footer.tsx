@@ -24,7 +24,7 @@ export default function Footer() {
           </div>
 
           {/* Legal Links */}
-          <div className="flex space-x-4 text-sm">
+          <div className="flex flex-wrap gap-3 text-sm justify-center md:justify-start md:flex-row md:space-x-4">
             <Link href="/terms-and-conditions" className="text-zinc-300 hover:text-blue-400 transition-colors">
               {t('footer.legalLinks.terms')}
             </Link>
