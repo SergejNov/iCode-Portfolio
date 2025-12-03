@@ -32,7 +32,7 @@ export default function TermsAndConditions() {
                 {t('legal.termsAndConditions.sections.services.content')}
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                {t('legal.termsAndConditions.sections.services.items').map((item: string, index: number) => (
+                {t.raw('legal.termsAndConditions.sections.services.items').map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -44,7 +44,7 @@ export default function TermsAndConditions() {
                 {t('legal.termsAndConditions.sections.clientObligations.content')}
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                {t('legal.termsAndConditions.sections.clientObligations.items').map((item: string, index: number) => (
+                {t.raw('legal.termsAndConditions.sections.clientObligations.items').map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -56,7 +56,7 @@ export default function TermsAndConditions() {
                 {t('legal.termsAndConditions.sections.companyObligations.content')}
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                {t('legal.termsAndConditions.sections.companyObligations.items').map((item: string, index: number) => (
+                {t.raw('legal.termsAndConditions.sections.companyObligations.items').map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -71,7 +71,7 @@ export default function TermsAndConditions() {
                 {t('legal.termsAndConditions.sections.pricingPayment.paymentTerms')}
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                {t('legal.termsAndConditions.sections.pricingPayment.items').map((item: string, index: number) => (
+                {t.raw('legal.termsAndConditions.sections.pricingPayment.items').map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -110,7 +110,7 @@ export default function TermsAndConditions() {
                 {t('legal.termsAndConditions.sections.termination.content1')}
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                {t('legal.termsAndConditions.sections.termination.items').map((item: string, index: number) => (
+                {t.raw('legal.termsAndConditions.sections.termination.items').map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>

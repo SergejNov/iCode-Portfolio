@@ -31,14 +31,14 @@ export default function PrivacyPolicy() {
               
               <h3 className="text-xl font-semibold mb-3 text-blue-300">2.1. {t('legal.privacyPolicy.sections.dataCollected.directData.title')}</h3>
               <ul className="list-disc list-inside space-y-2 ml-4 mb-4">
-                {t('legal.privacyPolicy.sections.dataCollected.directData.items' as any).map((item: string, index: number) => (
+                {t.raw('legal.privacyPolicy.sections.dataCollected.directData.items').map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
 
               <h3 className="text-xl font-semibold mb-3 text-blue-300">2.2. {t('legal.privacyPolicy.sections.dataCollected.automaticData.title')}</h3>
               <ul className="list-disc list-inside space-y-2 ml-4 mb-4">
-                {t('legal.privacyPolicy.sections.dataCollected.automaticData.items' as any).map((item: string, index: number) => (
+                {t.raw('legal.privacyPolicy.sections.dataCollected.automaticData.items').map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -55,7 +55,7 @@ export default function PrivacyPolicy() {
                 {t('legal.privacyPolicy.sections.dataUsage.content')}
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                {t('legal.privacyPolicy.sections.dataUsage.items' as any).map((item: string, index: number) => (
+                {t.raw('legal.privacyPolicy.sections.dataUsage.items').map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -67,7 +67,7 @@ export default function PrivacyPolicy() {
                 {t('legal.privacyPolicy.sections.dataProtection.content')}
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                {t('legal.privacyPolicy.sections.dataProtection.items' as any).map((item: string, index: number) => (
+                {t.raw('legal.privacyPolicy.sections.dataProtection.items').map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -115,7 +115,10 @@ export default function PrivacyPolicy() {
               <p className="mb-4">
                 {t('legal.privacyPolicy.sections.cookiesPolicy.content')}
               </p>
-              <ul className="list-disc list-inside space-y-2 ml-4 mb-4" dangerouslySetInnerHTML={{ __html: (t('legal.privacyPolicy.sections.cookiesPolicy.items' as any) as string[]).map(item => `<li>${item}</li>`).join('') }}>
+              <ul className="list-disc list-inside space-y-2 ml-4 mb-4">
+                {t.raw('legal.privacyPolicy.sections.cookiesPolicy.items').map((item: string, index: number) => (
+                  <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
+                ))}
               </ul>
               <p>
                 {t('legal.privacyPolicy.sections.cookiesPolicy.controlNote')}
@@ -128,7 +131,7 @@ export default function PrivacyPolicy() {
                 {t('legal.privacyPolicy.sections.thirdParties.content1')}
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4 mb-4">
-                {t('legal.privacyPolicy.sections.thirdParties.items').map((item: string, index: number) => (
+                {t.raw('legal.privacyPolicy.sections.thirdParties.items').map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -143,7 +146,7 @@ export default function PrivacyPolicy() {
                 {t('legal.privacyPolicy.sections.dataRetention.content1')}
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4 mb-4">
-                {t('legal.privacyPolicy.sections.dataRetention.items' as any).map((item: string, index: number) => (
+                {t.raw('legal.privacyPolicy.sections.dataRetention.items').map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>

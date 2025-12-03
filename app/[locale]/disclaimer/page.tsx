@@ -32,7 +32,7 @@ export default function Disclaimer() {
                 {t('legal.disclaimer.sections.liabilityDisclaimer.content')}
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4 mb-4">
-                {t('legal.disclaimer.sections.liabilityDisclaimer.items' as any).map((item: string, index: number) => (
+                {t.raw('legal.disclaimer.sections.liabilityDisclaimer.items').map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -47,7 +47,7 @@ export default function Disclaimer() {
                 {t('legal.disclaimer.sections.accuracy.content1')}
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4 mb-4">
-                {t('legal.disclaimer.sections.accuracy.items' as any).map((item: string, index: number) => (
+                {t.raw('legal.disclaimer.sections.accuracy.items').map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -62,7 +62,7 @@ export default function Disclaimer() {
                 {t('legal.disclaimer.sections.externalLinks.content1')}
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4 mb-4">
-                {t('legal.disclaimer.sections.externalLinks.items' as any).map((item: string, index: number) => (
+                {t.raw('legal.disclaimer.sections.externalLinks.items').map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -77,7 +77,7 @@ export default function Disclaimer() {
                 {t('legal.disclaimer.sections.intellectualProperty.content1')}
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4 mb-4">
-                {t('legal.disclaimer.sections.intellectualProperty.items' as any).map((item: string, index: number) => (
+                {t.raw('legal.disclaimer.sections.intellectualProperty.items').map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -95,7 +95,7 @@ export default function Disclaimer() {
                 {t('legal.disclaimer.sections.servicesResults.content1')}
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4 mb-4">
-                {t('legal.disclaimer.sections.servicesResults.items' as any).map((item: string, index: number) => (
+                {t.raw('legal.disclaimer.sections.servicesResults.items').map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -110,7 +110,7 @@ export default function Disclaimer() {
                 {t('legal.disclaimer.sections.technicalLimitations.content1')}
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4 mb-4">
-                {t('legal.disclaimer.sections.technicalLimitations.items' as any).map((item: string, index: number) => (
+                {t.raw('legal.disclaimer.sections.technicalLimitations.items').map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -135,7 +135,7 @@ export default function Disclaimer() {
                 {t('legal.disclaimer.sections.communication.content1')}
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4 mb-4">
-                {t('legal.disclaimer.sections.communication.items' as any).map((item: string, index: number) => (
+                {t.raw('legal.disclaimer.sections.communication.items').map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
