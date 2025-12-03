@@ -24,7 +24,9 @@ export default function Header() {
   };
 
   const changeLanguage = (newLocale: string) => {
-    const newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
+    // Remove the current locale from pathname and add the new one
+    const pathWithoutLocale = pathname.replace(/^\/(en|de|sr)/, '') || '/';
+    const newPath = `/${newLocale}${pathWithoutLocale}`;
     router.push(newPath);
     setIsLangOpen(false);
     setIsMobileLangOpen(false);

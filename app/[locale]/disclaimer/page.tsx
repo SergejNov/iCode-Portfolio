@@ -13,7 +13,10 @@ export default function Disclaimer() {
 
       <main className="relative z-10 mx-auto max-w-4xl px-4 pt-24 pb-16">
         <div className="rounded-2xl border-2 border-white/10 bg-blue-950/20 p-8 shadow-sm sm:p-12">
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-8 text-white">{t('legal.disclaimer.title')}</h1>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-8 text-white">
+            <span className="block sm:hidden">{t('footer.legalLinks.disclaimer')}</span>
+            <span className="hidden sm:block">{t('legal.disclaimer.title')}</span>
+          </h1>
           
           <div className="space-y-6 text-zinc-300">
             <section>
