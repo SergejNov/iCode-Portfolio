@@ -55,6 +55,7 @@ export default function Header() {
   }, []);
 
   const isServicesPage = pathname.includes('/services');
+  const isLegalPage = pathname.includes('/terms-and-conditions') || pathname.includes('/privacy-policy') || pathname.includes('/disclaimer');
 
   return (
     <header className="fixed left-0 right-0 top-0 z-40 border-b border-white/10 backdrop-blur-md bg-gray-900/80">
@@ -136,19 +137,19 @@ export default function Header() {
                 )}
               </div>
 
-              {/* Show Home button on services page */}
-              {isServicesPage && (
+              {/* Show Home button on services and legal pages */}
+              {(isServicesPage || isLegalPage) && (
                 <Link 
                   href="/" 
                   className="block rounded-lg border-2 border-blue-400 px-4 py-2 text-center font-medium text-blue-400 hover:bg-blue-950"
                   onClick={toggleMenu}
                 >
-                  Home
+                  {t('navigation.home')}
                 </Link>
               )}
 
-              {/* Hide services and coverage on services page */}
-              {!isServicesPage && (
+              {/* Hide services and coverage on services and legal pages */}
+              {!(isServicesPage || isLegalPage) && (
                 <>
                   <Link 
                     href="/services" 
@@ -166,24 +167,38 @@ export default function Header() {
                   </Link>
                 </>
               )}
+
+              {/* Show services on legal pages */}
+              {isLegalPage && (
+                <Link 
+                  href="/services" 
+                  className="block rounded-lg border-2 border-blue-400 px-4 py-2 text-center font-medium text-blue-400 hover:bg-blue-950"
+                  onClick={toggleMenu}
+                >
+                  {t('navigation.services')}
+                </Link>
+              )}
               
-              <Link 
-                href="#contact" 
-                className="block rounded-lg border-2 border-blue-400 px-4 py-2 text-center font-medium text-blue-400 hover:bg-blue-950"
-                onClick={isServicesPage ? (e) => {
-                  e.preventDefault();
-                  const element = document.getElementById('contact');
-                  if (element) {
-                    element.scrollIntoView({ 
-                      behavior: 'smooth',
-                      block: 'start'
-                    });
-                  }
-                  toggleMenu();
-                } : toggleMenu}
-              >
-                {t('navigation.contact')}
-              </Link>
+              {/* Hide contact on legal pages */}
+              {!isLegalPage && (
+                <Link 
+                  href="#contact" 
+                  className="block rounded-lg border-2 border-blue-400 px-4 py-2 text-center font-medium text-blue-400 hover:bg-blue-950"
+                  onClick={(isServicesPage || isLegalPage) ? (e) => {
+                    e.preventDefault();
+                    const element = document.getElementById('contact');
+                    if (element) {
+                      element.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                      });
+                    }
+                    toggleMenu();
+                  } : toggleMenu}
+                >
+                  {t('navigation.contact')}
+                </Link>
+              )}
               <a 
                 href="tel:+491639071541" 
                 className="flex items-center justify-center gap-2 rounded-lg border-2 border-blue-500 bg-blue-500 px-4 py-2 text-center font-medium text-white hover:bg-blue-600"
@@ -240,35 +255,43 @@ export default function Header() {
             )}
           </div>
 
-          {/* Show Home button on services page */}
-          {isServicesPage && (
-            <Link href="/" className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950">Home</Link>
+          {/* Show Home button on services and legal pages */}
+          {(isServicesPage || isLegalPage) && (
+            <Link href="/" className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950">{t('navigation.home')}</Link>
           )}
 
-          {/* Hide services and coverage on services page */}
-          {!isServicesPage && (
+          {/* Hide services and coverage on services and legal pages */}
+          {!(isServicesPage || isLegalPage) && (
             <>
               <Link href="/services" className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950">{t('navigation.services')}</Link>
               <Link href="#coverage" className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950">{t('navigation.references')}</Link>
             </>
           )}
           
-          <Link 
-            href={isServicesPage ? "#contact" : "#contact"} 
-            className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950"
-            onClick={isServicesPage ? (e) => {
-              e.preventDefault();
-              const element = document.getElementById('contact');
-              if (element) {
-                element.scrollIntoView({ 
-                  behavior: 'smooth',
-                  block: 'start'
-                });
-              }
-            } : undefined}
-          >
-            {t('navigation.contact')}
-          </Link>
+          {/* Show services on legal pages */}
+          {isLegalPage && (
+            <Link href="/services" className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950">{t('navigation.services')}</Link>
+          )}
+          
+          {/* Hide contact on legal pages */}
+          {!isLegalPage && (
+            <Link 
+              href={(isServicesPage || isLegalPage) ? "#contact" : "#contact"} 
+              className="rounded-full border-2 border-blue-400 px-4 py-2 text-blue-400 transition hover:bg-blue-950"
+              onClick={(isServicesPage || isLegalPage) ? (e) => {
+                e.preventDefault();
+                const element = document.getElementById('contact');
+                if (element) {
+                  element.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                  });
+                }
+              } : undefined}
+            >
+              {t('navigation.contact')}
+            </Link>
+          )}
           <a href="tel:+491639071541" className="flex items-center gap-2 rounded-full bg-blue-500 px-4 py-2 text-white transition hover:bg-blue-600">
             <PhoneIcon className="h-5 w-5" />
             <span>+49 163 9071541</span>

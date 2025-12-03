@@ -45,10 +45,10 @@ export default function Services() {
         {/* Page Header */}
         <section className="text-center mb-16">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 pb-1 mb-6">
-            {t('services.title')}
+            {t('servicesPage.title')}
           </h1>
           <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-            {t('services.subtitle')}
+            {t('servicesPage.subtitle')}
           </p>
         </section>
 
@@ -68,30 +68,30 @@ export default function Services() {
                   {t('services.items.graphicDesign.description')}
                 </p>
                 <p className="text-zinc-300 mb-6">
-                  Naš tim kreativnih dizajnera specijalizovan je za kreiranje vizuelnog identiteta koji će vaš brend učiniti prepoznatljivim i memorable. Od logo dizajna do kompletnih brend priručnika, mi osiguravamo da svaki vizuelni element komunicira vašu poruku na efikasan način.
+                  {t('servicesPage.sections.graphicDesign.approachDescription')}
                 </p>
                 
-                <h3 className="text-xl font-semibold mb-4 text-blue-400">Šta nudimo:</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-400">{t('servicesPage.sections.graphicDesign.whatWeOffer')}</h3>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start gap-3">
                     <CheckCircleIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Logo dizajn i vizuelni identitet</span>
+                    <span className="text-white">{t('servicesPage.sections.graphicDesign.items.logoDesign')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircleIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Brend priručnici i smernice</span>
+                    <span className="text-white">{t('servicesPage.sections.graphicDesign.items.brandGuidelines')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircleIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Dizajn marketing materijala</span>
+                    <span className="text-white">{t('servicesPage.sections.graphicDesign.items.marketingMaterials')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircleIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Packaging dizajn</span>
+                    <span className="text-white">{t('servicesPage.sections.graphicDesign.items.packagingDesign')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircleIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Dizajn za print i digital medije</span>
+                    <span className="text-white">{t('servicesPage.sections.graphicDesign.items.printDigital')}</span>
                   </li>
                 </ul>
               </div>
@@ -99,14 +99,14 @@ export default function Services() {
               <div className="bg-blue-950/20 rounded-xl p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <LightBulbIcon className="h-6 w-6 text-blue-400" />
-                  <h3 className="text-lg font-semibold text-blue-400">Naš pristup</h3>
+                  <h3 className="text-lg font-semibold text-blue-400">{t('servicesPage.sections.graphicDesign.approachTitle')}</h3>
                 </div>
                 <p className="text-zinc-300 mb-4">
-                  Svaki projekat započinjemo detaljnom analizom vašeg brenda, ciljne publike i konkurencije. Kreiramo dizajn koji nije samo lepo, već i strateški efikasan.
+                  {t('servicesPage.sections.graphicDesign.approachDescription')}
                 </p>
                 <div className="bg-blue-900/20 rounded-lg p-4 border border-blue-700/30">
                   <p className="text-sm text-blue-300">
-                    "Dobar dizajn je vidljiv, odličan dizajn je transparentan." - Joe Sparano
+                    {t('servicesPage.sections.graphicDesign.quote')}
                   </p>
                 </div>
               </div>
@@ -130,10 +130,10 @@ export default function Services() {
                   {t('services.items.webDevelopment.description')}
                 </p>
                 <p className="text-zinc-300 mb-6">
-                  Razvijamo moderne, brze i responsive web aplikacije korišćenjem najnovijih tehnologija. Naši developeri specijalizovani su za Next.js, React, i druge cutting-edge frameworkove koji osiguravaju optimalne performanse i korisničko iskustvo.
+                  {t('servicesPage.sections.webDevelopment.description')}
                 </p>
                 
-                <h3 className="text-xl font-semibold mb-4 text-blue-400">Tehnologije koje koristimo:</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-400">{t('servicesPage.sections.webDevelopment.technologies')}</h3>
                 <div className="grid grid-cols-2 gap-3 mb-6">
                   <div className="bg-blue-900/20 rounded-lg p-3 text-center hover:bg-blue-800/20 transition-all hover:scale-105 transform">
                     <span className="text-white">Next.js</span>
@@ -155,23 +155,23 @@ export default function Services() {
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-semibold mb-4 text-blue-400">Vrste projekata:</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-400">{t('servicesPage.sections.webDevelopment.projectTypes')}</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <RocketLaunchIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Corporate web sajtovi</span>
+                    <span className="text-white">{t('servicesPage.sections.webDevelopment.items.corporate')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <RocketLaunchIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">E-commerce platforme</span>
+                    <span className="text-white">{t('servicesPage.sections.webDevelopment.items.ecommerce')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <RocketLaunchIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Web aplikacije</span>
+                    <span className="text-white">{t('servicesPage.sections.webDevelopment.items.webApps')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <RocketLaunchIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Custom CMS sistemi</span>
+                    <span className="text-white">{t('servicesPage.sections.webDevelopment.items.customCms')}</span>
                   </li>
                 </ul>
               </div>
@@ -179,40 +179,40 @@ export default function Services() {
               <div className="bg-blue-950/20 rounded-xl p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <GlobeAltIcon className="h-6 w-6 text-blue-400" />
-                  <h3 className="text-lg font-semibold text-blue-400">Performanse i SEO</h3>
+                  <h3 className="text-lg font-semibold text-blue-400">{t('servicesPage.sections.webDevelopment.performanceSeo.title')}</h3>
                 </div>
                 <p className="text-zinc-300 mb-4">
-                  Svi naši sajtovi optimizovani su za brzinu, SEO prilagođenost i mobilne uređaje. Koristimo moderne tehnike kao što su lazy loading, code splitting i image optimization.
+                  {t('servicesPage.sections.webDevelopment.performanceSeo.description')}
                 </p>
                 <div className="space-y-3">
                   <div className="sm:hidden grid grid-cols-2 gap-3 text-center">
                     <div className="bg-blue-900/20 rounded-lg p-2 border border-blue-700/30 hover:bg-blue-800/20 transition-all hover:scale-105 transform">
                       <div className="text-xl font-bold text-blue-400">95+</div>
-                      <div className="text-xs text-zinc-300">PageSpeed</div>
+                      <div className="text-xs text-zinc-300">{t('servicesPage.sections.webDevelopment.performanceSeo.pageSpeed')}</div>
                     </div>
                     <div className="bg-blue-900/20 rounded-lg p-2 border border-blue-700/30 hover:bg-blue-800/20 transition-all hover:scale-105 transform">
                       <div className="text-xl font-bold text-blue-400">100%</div>
-                      <div className="text-xs text-zinc-300">Responsive</div>
+                      <div className="text-xs text-zinc-300">{t('servicesPage.sections.webDevelopment.performanceSeo.responsive')}</div>
                     </div>
                   </div>
                   <div className="hidden sm:block text-center">
                     <div className="bg-blue-900/20 rounded-lg p-3 border border-blue-700/30 mb-3 hover:bg-blue-800/20 transition-all hover:scale-105 transform">
                       <div className="text-xl font-bold text-blue-400">95+</div>
-                      <div className="text-xs text-zinc-300">PageSpeed</div>
+                      <div className="text-xs text-zinc-300">{t('servicesPage.sections.webDevelopment.performanceSeo.pageSpeed')}</div>
                     </div>
                     <div className="bg-blue-900/20 rounded-lg p-3 border border-blue-700/30 mb-3 hover:bg-blue-800/20 transition-all hover:scale-105 transform">
                       <div className="text-xl font-bold text-blue-400">100%</div>
-                      <div className="text-xs text-zinc-300">Responsive</div>
+                      <div className="text-xs text-zinc-300">{t('servicesPage.sections.webDevelopment.performanceSeo.responsive')}</div>
                     </div>
                     <div className="bg-blue-900/20 rounded-lg p-3 border border-blue-700/30 hover:bg-blue-800/20 transition-all hover:scale-105 transform">
                       <div className="text-xl font-bold text-blue-400">A+</div>
-                      <div className="text-xs text-zinc-300">SEO Score</div>
+                      <div className="text-xs text-zinc-300">{t('servicesPage.sections.webDevelopment.performanceSeo.seoScore')}</div>
                     </div>
                   </div>
                   <div className="sm:hidden flex justify-center">
                     <div className="bg-blue-900/20 rounded-lg p-2 border border-blue-700/30 w-32 text-center hover:bg-blue-800/20 transition-all hover:scale-105 transform">
                       <div className="text-xl font-bold text-blue-400">A+</div>
-                      <div className="text-xs text-zinc-300">SEO Score</div>
+                      <div className="text-xs text-zinc-300">{t('servicesPage.sections.webDevelopment.performanceSeo.seoScore')}</div>
                     </div>
                   </div>
                 </div>
@@ -237,46 +237,46 @@ export default function Services() {
                   {t('services.items.seo.description')}
                 </p>
                 <p className="text-zinc-300 mb-6">
-                  SEO je ključni element za online vidljivost i rast poslovanja. Naš tim SEO eksperata koristi belo-hat tehnike i najnovije alate da poboljša vaš rang na pretraživačima i poveća organski saobraćaj.
+                  {t('servicesPage.sections.seo.description')}
                 </p>
                 
-                <h3 className="text-xl font-semibold mb-4 text-blue-400">SEO usluge:</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-400">{t('servicesPage.sections.seo.servicesTitle')}</h3>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start gap-3">
                     <MagnifyingGlassIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Tehnička SEO optimizacija</span>
+                    <span className="text-white">{t('servicesPage.sections.seo.items.technical')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <MagnifyingGlassIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Keyword research i analiza</span>
+                    <span className="text-white">{t('servicesPage.sections.seo.items.keyword')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <MagnifyingGlassIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">On-page optimizacija</span>
+                    <span className="text-white">{t('servicesPage.sections.seo.items.onpage')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <MagnifyingGlassIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Link building strategije</span>
+                    <span className="text-white">{t('servicesPage.sections.seo.items.linkbuilding')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <MagnifyingGlassIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Local SEO optimizacija</span>
+                    <span className="text-white">{t('servicesPage.sections.seo.items.local')}</span>
                   </li>
                 </ul>
                 
-                <h3 className="text-xl font-semibold mb-4 text-blue-400">Alati i analitika:</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-400">{t('servicesPage.sections.seo.toolsTitle')}</h3>
                 <div className="grid grid-cols-2 gap-3">
                   <div className="bg-blue-900/20 rounded-lg p-3 text-center hover:bg-blue-800/20 transition-all hover:scale-105 transform">
-                    <span className="text-white">Google Analytics</span>
+                    <span className="text-white">{t('servicesPage.sections.seo.tools.analytics')}</span>
                   </div>
                   <div className="bg-blue-900/20 rounded-lg p-3 text-center hover:bg-blue-800/20 transition-all hover:scale-105 transform">
-                    <span className="text-white">Search Console</span>
+                    <span className="text-white">{t('servicesPage.sections.seo.tools.console')}</span>
                   </div>
                   <div className="bg-blue-900/20 rounded-lg p-3 text-center hover:bg-blue-800/20 transition-all hover:scale-105 transform">
-                    <span className="text-white">SEMrush</span>
+                    <span className="text-white">{t('servicesPage.sections.seo.tools.semrush')}</span>
                   </div>
                   <div className="bg-blue-900/20 rounded-lg p-3 text-center hover:bg-blue-800/20 transition-all hover:scale-105 transform">
-                    <span className="text-white">Ahrefs</span>
+                    <span className="text-white">{t('servicesPage.sections.seo.tools.ahrefs')}</span>
                   </div>
                 </div>
               </div>
@@ -284,22 +284,22 @@ export default function Services() {
               <div className="bg-blue-950/20 rounded-xl p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <ChartBarIcon className="h-6 w-6 text-blue-400" />
-                  <h3 className="text-lg font-semibold text-blue-400">Mjerenje uspešnosti</h3>
+                  <h3 className="text-lg font-semibold text-blue-400">{t('servicesPage.sections.seo.performanceTitle')}</h3>
                 </div>
                 <p className="text-zinc-300 mb-4">
-                  Pratimo ključne metrike i pružamo detaljne izveštaje o napretku. Naši klijenti vide konkretne rezultate kroz povećanje saobraćaja, bolji rang i više konverzija.
+                  {t('servicesPage.sections.seo.performanceDescription')}
                 </p>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center bg-blue-900/20 rounded-lg p-3 hover:bg-blue-800/20 transition-all hover:scale-105 transform">
-                    <span className="text-white">Organski saobraćaj</span>
+                    <span className="text-white">{t('servicesPage.sections.seo.metrics.organic')}</span>
                     <span className="text-blue-400 font-semibold">+150%</span>
                   </div>
                   <div className="flex justify-between items-center bg-blue-900/20 rounded-lg p-3 hover:bg-blue-800/20 transition-all hover:scale-105 transform">
-                    <span className="text-white">Keywords na prvoj strani</span>
+                    <span className="text-white">{t('servicesPage.sections.seo.metrics.keywords')}</span>
                     <span className="text-blue-400 font-semibold">+85%</span>
                   </div>
                   <div className="flex justify-between items-center bg-blue-900/20 rounded-lg p-3 hover:bg-blue-800/20 transition-all hover:scale-105 transform">
-                    <span className="text-white">Konverzije</span>
+                    <span className="text-white">{t('servicesPage.sections.seo.metrics.conversions')}</span>
                     <span className="text-blue-400 font-semibold">+200%</span>
                   </div>
                 </div>
@@ -324,30 +324,30 @@ export default function Services() {
                   {t('services.items.content.description')}
                 </p>
                 <p className="text-zinc-300 mb-6">
-                  Kreiramo visokokvalitetan sadržaj koji privlači, angažuje i konvertuje vašu ciljnu publiku. Naš tim content stratega i copywritera razume važnost relevantnog i vrednog sadržaja za izgradnju brenda i poverenja.
+                  {t('servicesPage.sections.content.description')}
                 </p>
                 
-                <h3 className="text-xl font-semibold mb-4 text-blue-400">Vrste sadržaja:</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-400">{t('servicesPage.sections.content.typesTitle')}</h3>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start gap-3">
                     <SparklesIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Blog članci i guest posting</span>
+                    <span className="text-white">{t('servicesPage.sections.content.items.blog')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <SparklesIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Video sadržaj i skriptovi</span>
+                    <span className="text-white">{t('servicesPage.sections.content.items.video')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <SparklesIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Infografike i vizuelni sadržaj</span>
+                    <span className="text-white">{t('servicesPage.sections.content.items.infographics')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <SparklesIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Email marketing kampanje</span>
+                    <span className="text-white">{t('servicesPage.sections.content.items.email')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <SparklesIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Case studije i whitepaperi</span>
+                    <span className="text-white">{t('servicesPage.sections.content.items.caseStudies')}</span>
                   </li>
                 </ul>
               </div>
@@ -355,19 +355,19 @@ export default function Services() {
               <div className="bg-blue-950/20 rounded-xl p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <CursorArrowRaysIcon className="h-6 w-6 text-blue-400" />
-                  <h3 className="text-lg font-semibold text-blue-400">Content strategija</h3>
+                  <h3 className="text-lg font-semibold text-blue-400">{t('servicesPage.sections.content.strategyTitle')}</h3>
                 </div>
                 <p className="text-zinc-300 mb-4">
-                  Razvijamo personalizovane content strategije bazirane na analizi vaše publike, industrije i ciljeva. Svaki sadržaj je optimizovan za SEO i dizajniran da generiše rezultate.
+                  {t('servicesPage.sections.content.strategyDescription')}
                 </p>
                 <div className="bg-blue-900/20 rounded-lg p-4 border border-blue-700/30">
-                  <h4 className="font-semibold text-blue-400 mb-2">Naš proces:</h4>
+                  <h4 className="font-semibold text-blue-400 mb-2">{t('servicesPage.sections.content.processTitle')}</h4>
                   <ol className="space-y-2 text-sm text-white">
-                    <li>1. Analiza i research</li>
-                    <li>2. Kreiranje content kalendara</li>
-                    <li>3. Produkcija i optimizacija</li>
-                    <li>4. Distribucija i promocija</li>
-                    <li>5. Analiza i iteracija</li>
+                    <li>{t('servicesPage.sections.content.process.analysis')}</li>
+                    <li>{t('servicesPage.sections.content.process.calendar')}</li>
+                    <li>{t('servicesPage.sections.content.process.production')}</li>
+                    <li>{t('servicesPage.sections.content.process.distribution')}</li>
+                    <li>{t('servicesPage.sections.content.process.iteration')}</li>
                   </ol>
                 </div>
               </div>
@@ -391,48 +391,48 @@ export default function Services() {
                   {t('services.items.socialMedia.description')}
                 </p>
                 <p className="text-zinc-300 mb-6">
-                  Upravljamo vašim prisustvom na društvenim mrežama i kreiramo kampanje koje grade zajednicu, povećavaju angažovanje i voze poslovanje. Specijalizovani smo za sve relevantne platforme.
+                  {t('servicesPage.sections.socialMedia.description')}
                 </p>
                 
-                <h3 className="text-xl font-semibold mb-4 text-blue-400">Platforme koje pokrivamo:</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-400">{t('servicesPage.sections.socialMedia.platformsTitle')}</h3>
                 <div className="grid grid-cols-2 gap-3 mb-6">
                   <div className="bg-blue-900/20 rounded-lg p-3 text-center hover:bg-blue-800/20 transition-all hover:scale-105 transform">
-                    <span className="text-white font-semibold">Instagram</span>
+                    <span className="text-white font-semibold">{t('servicesPage.sections.socialMedia.platforms.instagram')}</span>
                   </div>
                   <div className="bg-blue-900/20 rounded-lg p-3 text-center hover:bg-blue-800/20 transition-all hover:scale-105 transform">
-                    <span className="text-white font-semibold">Facebook</span>
+                    <span className="text-white font-semibold">{t('servicesPage.sections.socialMedia.platforms.facebook')}</span>
                   </div>
                   <div className="bg-blue-900/20 rounded-lg p-3 text-center hover:bg-blue-800/20 transition-all hover:scale-105 transform">
-                    <span className="text-white font-semibold">LinkedIn</span>
+                    <span className="text-white font-semibold">{t('servicesPage.sections.socialMedia.platforms.linkedin')}</span>
                   </div>
                   <div className="bg-blue-900/20 rounded-lg p-3 text-center hover:bg-blue-800/20 transition-all hover:scale-105 transform">
-                    <span className="text-white font-semibold">YouTube</span>
+                    <span className="text-white font-semibold">{t('servicesPage.sections.socialMedia.platforms.youtube')}</span>
                   </div>
                   <div className="bg-blue-900/20 rounded-lg p-3 text-center hover:bg-blue-800/20 transition-all hover:scale-105 transform">
-                    <span className="text-white font-semibold">X (Twitter)</span>
+                    <span className="text-white font-semibold">{t('servicesPage.sections.socialMedia.platforms.twitter')}</span>
                   </div>
                   <div className="bg-blue-900/20 rounded-lg p-3 text-center hover:bg-blue-800/20 transition-all hover:scale-105 transform">
-                    <span className="text-white font-semibold">TikTok</span>
+                    <span className="text-white font-semibold">{t('servicesPage.sections.socialMedia.platforms.tiktok')}</span>
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-semibold mb-4 text-blue-400">Usluge:</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-400">{t('servicesPage.sections.socialMedia.servicesTitle')}</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <HandRaisedIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Social media strategija</span>
+                    <span className="text-white">{t('servicesPage.sections.socialMedia.items.strategy')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <HandRaisedIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Content kreacija i scheduling</span>
+                    <span className="text-white">{t('servicesPage.sections.socialMedia.items.content')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <HandRaisedIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Community management</span>
+                    <span className="text-white">{t('servicesPage.sections.socialMedia.items.community')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <HandRaisedIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Plasirane reklamne kampanje</span>
+                    <span className="text-white">{t('servicesPage.sections.socialMedia.items.ads')}</span>
                   </li>
                 </ul>
               </div>
@@ -440,15 +440,15 @@ export default function Services() {
               <div className="bg-blue-950/20 rounded-xl p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <ChartBarIcon className="h-6 w-6 text-blue-400" />
-                  <h3 className="text-lg font-semibold text-blue-400">Analitika i reporting</h3>
+                  <h3 className="text-lg font-semibold text-blue-400">{t('servicesPage.sections.socialMedia.analyticsTitle')}</h3>
                 </div>
                 <p className="text-zinc-300 mb-4">
-                  Pratimo ključne metrike kao što su engagement rate, reach, impressions i konverzije. Pružamo nedeljne i mesečne izveštaje sa detaljnom analizom performansi.
+                  {t('servicesPage.sections.socialMedia.analyticsDescription')}
                 </p>
                 <div className="space-y-3">
                   <div className="bg-blue-900/20 rounded-lg p-3 border border-blue-700/30 hover:bg-blue-800/20 transition-all hover:scale-105 transform">
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-white">Engagement Rate</span>
+                      <span className="text-white">{t('servicesPage.sections.socialMedia.metrics.engagement')}</span>
                       <span className="text-blue-400 font-semibold">4.8%</span>
                     </div>
                     <div className="w-full bg-zinc-700 rounded-full h-2">
@@ -457,7 +457,7 @@ export default function Services() {
                   </div>
                   <div className="bg-blue-900/20 rounded-lg p-3 border border-blue-700/30 hover:bg-blue-800/20 transition-all hover:scale-105 transform">
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-white">Follower Growth</span>
+                      <span className="text-white">{t('servicesPage.sections.socialMedia.metrics.growth')}</span>
                       <span className="text-blue-400 font-semibold">+25%</span>
                     </div>
                     <div className="w-full bg-zinc-700 rounded-full h-2">
@@ -486,40 +486,40 @@ export default function Services() {
                   {t('services.items.googleAds.description')}
                 </p>
                 <p className="text-zinc-300 mb-6">
-                  Kao Google Partner certificirana agencija, kreiramo i optimizujemo PPC kampanje koje dostavljaju maksimalan ROI. Koristimo napredne tehnike targetiranja i optimizacije da osiguramo najbolje rezultate.
+                  {t('servicesPage.sections.googleAds.description')}
                 </p>
                 
-                <h3 className="text-xl font-semibold mb-4 text-blue-400">Google Ads usluge:</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-400">{t('servicesPage.sections.googleAds.servicesTitle')}</h3>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start gap-3">
                     <MegaphoneIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Search kampanje (Google Search)</span>
+                    <span className="text-white">{t('servicesPage.sections.googleAds.items.search')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <MegaphoneIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Display kampanje (Google Display Network)</span>
+                    <span className="text-white">{t('servicesPage.sections.googleAds.items.display')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <MegaphoneIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Shopping kampanje</span>
+                    <span className="text-white">{t('servicesPage.sections.googleAds.items.shopping')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <MegaphoneIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Video kampanje (YouTube)</span>
+                    <span className="text-white">{t('servicesPage.sections.googleAds.items.video')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <MegaphoneIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">Performance Max kampanje</span>
+                    <span className="text-white">{t('servicesPage.sections.googleAds.items.performance')}</span>
                   </li>
                 </ul>
                 
-                <h3 className="text-xl font-semibold mb-4 text-blue-400">Certifikacije:</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-400">{t('servicesPage.sections.googleAds.certificationsTitle')}</h3>
                 <div className="flex gap-3">
                   <div className="bg-blue-900/20 rounded-lg p-3 border border-blue-700/30 hover:bg-blue-800/20 transition-all hover:scale-105 transform">
-                    <span className="text-blue-400 font-semibold text-sm">Google Ads Certified</span>
+                    <span className="text-blue-400 font-semibold text-sm">{t('servicesPage.sections.googleAds.certifications.ads')}</span>
                   </div>
                   <div className="bg-blue-900/20 rounded-lg p-3 border border-blue-700/30 hover:bg-blue-800/20 transition-all hover:scale-105 transform">
-                    <span className="text-blue-400 font-semibold text-sm">Analytics Certified</span>
+                    <span className="text-blue-400 font-semibold text-sm">{t('servicesPage.sections.googleAds.certifications.analytics')}</span>
                   </div>
                 </div>
               </div>
@@ -527,27 +527,27 @@ export default function Services() {
               <div className="bg-blue-950/20 rounded-xl p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <ChartBarIcon className="h-6 w-6 text-blue-400" />
-                  <h3 className="text-lg font-semibold text-blue-400">ROI optimizacija</h3>
+                  <h3 className="text-lg font-semibold text-blue-400">{t('servicesPage.sections.googleAds.optimizationTitle')}</h3>
                 </div>
                 <p className="text-zinc-300 mb-4">
-                  Fokusiramo se na merljive rezultate i pozitivan ROI. Koristimo A/B testing, optimizaciju CPC-a i napredno targetiranje da maksimiziramo vašu investiciju.
+                  {t('servicesPage.sections.googleAds.optimizationDescription')}
                 </p>
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div className="bg-blue-900/20 rounded-lg p-3 border border-blue-700/30 hover:bg-blue-800/20 transition-all hover:scale-105 transform">
                     <div className="text-2xl font-bold text-blue-400">3.5x</div>
-                    <div className="text-xs text-zinc-300">Avg. ROAS</div>
+                    <div className="text-xs text-zinc-300">{t('servicesPage.sections.googleAds.metrics.roas')}</div>
                   </div>
                   <div className="bg-blue-900/20 rounded-lg p-3 border border-blue-700/30 hover:bg-blue-800/20 transition-all hover:scale-105 transform">
                     <div className="text-2xl font-bold text-blue-400">-40%</div>
-                    <div className="text-xs text-zinc-300">CPC Reduction</div>
+                    <div className="text-xs text-zinc-300">{t('servicesPage.sections.googleAds.metrics.cpc')}</div>
                   </div>
                   <div className="bg-blue-900/20 rounded-lg p-3 border border-blue-700/30 hover:bg-blue-800/20 transition-all hover:scale-105 transform">
                     <div className="text-2xl font-bold text-blue-400">85%</div>
-                    <div className="text-xs text-zinc-300">Quality Score</div>
+                    <div className="text-xs text-zinc-300">{t('servicesPage.sections.googleAds.metrics.quality')}</div>
                   </div>
                   <div className="bg-blue-900/20 rounded-lg p-3 border border-blue-700/30 hover:bg-blue-800/20 transition-all hover:scale-105 transform">
                     <div className="text-2xl font-bold text-blue-400">12%</div>
-                    <div className="text-xs text-zinc-300">CTR</div>
+                    <div className="text-xs text-zinc-300">{t('servicesPage.sections.googleAds.metrics.ctr')}</div>
                   </div>
                 </div>
               </div>
@@ -559,9 +559,9 @@ export default function Services() {
         <section id="contact" className="scroll-mt-20 mt-16">
           <div className="rounded-2xl border-2 border-white/10 bg-blue-950/20 p-12">
             <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold tracking-tight mb-4 text-white">Spremni za saradnju?</h2>
+              <h2 className="text-3xl font-bold tracking-tight mb-4 text-white">{t('servicesPage.contactSection.title')}</h2>
               <p className="text-xl text-zinc-300 max-w-2xl mx-auto">
-                Kontaktirajte nas danas za besplatnu konsultaciju i saznajte kako možemo pomoći vašem brendu da dostigne nove visine.
+                {t('servicesPage.contactSection.subtitle')}
               </p>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-4">
